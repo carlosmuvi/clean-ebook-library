@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bq Sample</string>
+    <string name="title_activity_login">BQ Ebook Library</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_ebook_list">EbookListActivity</string>
+    <string name="title_activity_ebook_details">EbookDetailsActivity</string>
+</resources>
