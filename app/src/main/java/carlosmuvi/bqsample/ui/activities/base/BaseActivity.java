@@ -2,6 +2,7 @@ package carlosmuvi.bqsample.ui.activities.base;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import butterknife.Bind;
@@ -11,7 +12,7 @@ import carlosmuvi.bqsample.R;
 /**
  * Created by carlos.
  */
-public abstract class BaseActivity extends ActionBarActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     @Bind(R.id.toolbar)
     public Toolbar toolbar;
@@ -21,12 +22,11 @@ public abstract class BaseActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResource());
 
+        ButterKnife.bind(this);
+
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
-
-        ButterKnife.bind(this);
-
 
     }
 

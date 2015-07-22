@@ -32,5 +32,6 @@
     <orderEntry type="library" exported="" scope="PROVIDED" name="javax.inject-1" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="dagger-producers-2.0-beta" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="guava-18.0" level="project" />
+    <orderEntry type="library" exported="" name="domain.domain" level="project" />
   </component>
 </module>

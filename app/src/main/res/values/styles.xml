@@ -2,12 +2,10 @@
 
     <style name="AppTheme" parent="AppTheme.Base" />
 
-    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="android:textColorPrimary">@color/abc_primary_text_material_dark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
     </style>
 
 </resources>

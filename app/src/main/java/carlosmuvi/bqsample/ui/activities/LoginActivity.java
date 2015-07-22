@@ -20,7 +20,7 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.View {
 
     /**
      * *********************
-     * Dependency injection *
+     * Dependency injection
      * *********************
      */
 
@@ -42,7 +42,7 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.View {
 
     /**
      * *********************
-     * Activity lifecycle  *
+     * Activity lifecycle
      * *********************
      */
 
@@ -77,7 +77,7 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.View {
 
     /**
      * *********************
-     * View Inherited   *
+     * View Inherited
      * *********************
      */
 
