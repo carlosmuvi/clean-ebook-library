@@ -1,5 +1,4 @@
 apply plugin: 'java'
-apply plugin: 'checkstyle'
 apply plugin: 'war'
 
 sourceCompatibility = JavaVersion.VERSION_1_7

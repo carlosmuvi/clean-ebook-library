@@ -4,6 +4,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_ebook_list">EbookListActivity</string>
-    <string name="title_activity_ebook_details">EbookDetailsActivity</string>
+    <string name="title_activity_ebook_list">Your Ebooks</string>
+    <string name="title_activity_ebook_details">Ebook Details</string>
+
 </resources>

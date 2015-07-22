@@ -2,8 +2,11 @@ package carlosmuvi.bqsample.ui.activities;
 
 import android.os.Bundle;
 
+import javax.inject.Inject;
+
 import carlosmuvi.bqsample.BqSampleApp;
 import carlosmuvi.bqsample.R;
+import carlosmuvi.bqsample.datasource.EbookDatasource;
 import carlosmuvi.bqsample.di.ActivityModule;
 import carlosmuvi.bqsample.di.components.DaggerLoginComponent;
 import carlosmuvi.bqsample.di.components.LoginComponent;
@@ -30,6 +33,7 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         component().inject(this);
+
     }
 
     @Override

@@ -10,6 +10,7 @@ import carlosmuvi.bqsample.executor.InteractorExecutor;
 import carlosmuvi.bqsample.executor.MainThread;
 import carlosmuvi.bqsample.executor.ThreadExecutor;
 import carlosmuvi.data.dropbox.DropboxDatasource;
+import carlosmuvi.data.dropbox.mapper.DropboxBookMapper;
 import dagger.Module;
 import dagger.Provides;
 
@@ -41,12 +42,5 @@ public class ApplicationModule {
     MainThread providePostExecutionThread(UIThread uiThread) {
         return uiThread;
     }
-
-    @Provides
-    @Singleton
-    EbookDatasource provideEbookDatasource(DropboxDatasource dropboxDatasource) {
-        return dropboxDatasource;
-    }
-
 
 }

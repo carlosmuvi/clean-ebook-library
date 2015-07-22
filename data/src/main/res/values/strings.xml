@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">data</string>
+    <string name="dropbox_key">mi0sd98zj3hztww</string>
+    <string name="dropbox_secret">4n91uululn0hhjg</string>
 </resources>

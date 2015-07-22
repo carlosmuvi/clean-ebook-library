@@ -3,6 +3,7 @@ package carlosmuvi.bqsample.di.components;
 import carlosmuvi.bqsample.di.ActivityModule;
 import carlosmuvi.bqsample.di.EbookDetailsModule;
 import carlosmuvi.bqsample.di.scopes.ActivityScope;
+import carlosmuvi.bqsample.presenters.EbookDetailsPresenter;
 import carlosmuvi.bqsample.ui.activities.EbookDetailsActivity;
 import dagger.Component;
 
@@ -17,5 +18,9 @@ public interface EbookDetailsComponent extends GenericActivityComponent {
 
     void inject(EbookDetailsActivity ebookDetailsActivity);
 
-    //PRESENTER, USECASES, DATASOURCE
+    // PRESENTER
+
+    // USECASES
+
+    // DATASOURCE
 }

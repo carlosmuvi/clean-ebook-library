@@ -17,5 +17,9 @@ public interface EbookListComponent extends GenericActivityComponent {
 
     void inject(EbookListActivity ebookListActivity);
 
-    //PRESENTER, USECASES, DATASOURCE
+    //PRESENTER
+
+    //USECASES (if needed)
+
+    //DATASOURCE (if needed)
 }

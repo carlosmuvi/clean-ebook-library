@@ -6,6 +6,8 @@ import javax.inject.Singleton;
 
 import carlosmuvi.bqsample.BqSampleApp;
 import carlosmuvi.bqsample.di.ApplicationModule;
+import carlosmuvi.bqsample.executor.InteractorExecutor;
+import carlosmuvi.bqsample.executor.MainThread;
 import dagger.Component;
 
 /**
@@ -19,9 +21,7 @@ public interface ApplicationComponent {
 
     Application application();
 
-    //TODO uncomment when implemented
-    //InteractorExecutor threadExecutor();
+    InteractorExecutor threadExecutor();
 
-    //TODO uncomment when implemented
-    //MainThread mainThread();
+    MainThread mainThread();
 }
