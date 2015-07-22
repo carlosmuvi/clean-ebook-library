@@ -1,8 +1,11 @@
 package carlosmuvi.bqsample.di;
 
 import carlosmuvi.bqsample.datasource.EbookDatasource;
+import carlosmuvi.bqsample.interactors.LoginUsecase;
+import carlosmuvi.bqsample.interactors.LoginUsecaseImpl;
+import carlosmuvi.bqsample.presenters.LoginPresenter;
+import carlosmuvi.bqsample.presenters.LoginPresenterImpl;
 import carlosmuvi.data.dropbox.DropboxDatasource;
-import carlosmuvi.data.dropbox.mapper.DropboxBookMapper;
 import dagger.Module;
 import dagger.Provides;
 
@@ -13,8 +16,16 @@ import dagger.Provides;
 public class LoginModule {
 
     //PRESENTER
+    @Provides
+    LoginPresenter provideLoginPresenter(LoginPresenterImpl presenter) {
+        return presenter;
+    }
 
     //USECASES
+    @Provides
+    LoginUsecase provideLoginUsecase(LoginUsecaseImpl loginUsecase) {
+        return loginUsecase;
+    }
 
     //DATASOURCE AND MAPPER
     @Provides

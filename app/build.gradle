@@ -41,4 +41,5 @@ dependencies {
     compile parent.ext.libDagger
     compile parent.ext.libAppCompat
     compile parent.ext.libGlide
+    compile parent.ext.libDesign
 }

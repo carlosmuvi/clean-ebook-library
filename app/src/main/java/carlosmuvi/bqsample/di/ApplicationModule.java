@@ -4,13 +4,10 @@ import android.app.Application;
 
 import javax.inject.Singleton;
 
-import carlosmuvi.bqsample.datasource.EbookDatasource;
 import carlosmuvi.bqsample.domain.UIThread;
 import carlosmuvi.bqsample.executor.InteractorExecutor;
 import carlosmuvi.bqsample.executor.MainThread;
 import carlosmuvi.bqsample.executor.ThreadExecutor;
-import carlosmuvi.data.dropbox.DropboxDatasource;
-import carlosmuvi.data.dropbox.mapper.DropboxBookMapper;
 import dagger.Module;
 import dagger.Provides;
 

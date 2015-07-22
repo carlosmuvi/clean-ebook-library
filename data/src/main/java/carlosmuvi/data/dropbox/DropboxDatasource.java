@@ -75,6 +75,9 @@ public class DropboxDatasource implements EbookDatasource {
                 Log.i("DbAuthLog", "Error authenticating", e);
                 callback.onError();
             }
+        } else {
+            Log.i("DbAuthLog", "Error authenticating");
+            callback.onError();
         }
     }
 

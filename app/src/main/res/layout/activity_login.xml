@@ -10,5 +10,12 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimaryDark" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login with Dropbox"
+        android:id="@+id/loginBtn"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
