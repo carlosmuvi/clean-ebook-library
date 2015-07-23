@@ -3,8 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="carlosmuvi.bqsample.ui.activities.EbookListActivity">
     <item
-        android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+        android:id="@+id/group_orderBy"
+        android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
         android:orderInCategory="100"
-        app:showAsAction="never" />
+        android:title="Order by"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_orderBy_title"
+                android:icon="@drawable/abc_ic_clear_mtrl_alpha"
+                android:title="Order by title"
+                app:showAsAction="ifRoom|withText" />
+            <item
+                android:id="@+id/action_orderBy_date"
+                android:icon="@drawable/abc_ic_clear_mtrl_alpha"
+                android:title="Order by date"
+                app:showAsAction="ifRoom|withText" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/group_showAs"
+        android:icon="@drawable/abc_ic_menu_cut_mtrl_alpha"
+        android:orderInCategory="101"
+        android:title="Order by"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_showAs_grid"
+                android:icon="@drawable/abc_ic_clear_mtrl_alpha"
+                android:title="Show as grid"
+                app:showAsAction="ifRoom|withText" />
+            <item
+                android:id="@+id/action_showAs_list"
+                android:icon="@drawable/abc_ic_clear_mtrl_alpha"
+                android:title="Show as list"
+                app:showAsAction="ifRoom|withText" />
+        </menu>
+    </item>
 </menu>

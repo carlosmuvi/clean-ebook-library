@@ -1,8 +1,14 @@
 package carlosmuvi.bqsample.di.components;
 
+import carlosmuvi.bqsample.datasource.EbookDatasource;
 import carlosmuvi.bqsample.di.ActivityModule;
 import carlosmuvi.bqsample.di.EbookListModule;
 import carlosmuvi.bqsample.di.scopes.ActivityScope;
+import carlosmuvi.bqsample.interactors.GetEbooksUsecase;
+import carlosmuvi.bqsample.interactors.LoginUsecase;
+import carlosmuvi.bqsample.interactors.ReorderEbooksUsecase;
+import carlosmuvi.bqsample.presenters.EbookListPresenter;
+import carlosmuvi.bqsample.presenters.LoginPresenter;
 import carlosmuvi.bqsample.ui.activities.EbookListActivity;
 import dagger.Component;
 
@@ -17,9 +23,12 @@ public interface EbookListComponent extends GenericActivityComponent {
 
     void inject(EbookListActivity ebookListActivity);
 
-    //PRESENTER
+    GetEbooksUsecase getEbooksUsecase();
 
-    //USECASES (if needed)
+    ReorderEbooksUsecase reorderEbooksUsecase();
 
-    //DATASOURCE (if needed)
+    EbookListPresenter ebookListPresenter();
+
+    EbookDatasource ebookDatasource();
+
 }
