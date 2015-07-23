@@ -3,6 +3,7 @@ package carlosmuvi.bqsample.di;
 import android.app.Activity;
 
 import carlosmuvi.bqsample.di.scopes.ActivityScope;
+import carlosmuvi.bqsample.navigation.BqSampleNavigator;
 import carlosmuvi.bqsample.navigation.Navigator;
 import dagger.Module;
 import dagger.Provides;
@@ -27,7 +28,7 @@ public class ActivityModule {
 
     @Provides
     @ActivityScope
-    Navigator provideNavigator(Navigator navigator) {
+    Navigator provideNavigator(BqSampleNavigator navigator) {
         return navigator;
     }
 }

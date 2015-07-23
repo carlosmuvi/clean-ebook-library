@@ -5,6 +5,8 @@ import android.util.Log;
 import javax.inject.Inject;
 
 import carlosmuvi.bqsample.interactors.LoginUsecase;
+import carlosmuvi.bqsample.navigation.BqSampleNavigator;
+import carlosmuvi.bqsample.navigation.Navigator;
 
 /**
  * Created by carlos.
@@ -13,12 +15,14 @@ public class LoginPresenterImpl implements LoginPresenter {
 
     View view;
     LoginUsecase usecase;
+    Navigator navigator;
 
     private boolean loginProccessStarted = false;
 
     @Inject
-    public LoginPresenterImpl(LoginUsecase usecase) {
+    public LoginPresenterImpl(LoginUsecase usecase, Navigator navigator) {
         this.usecase = usecase;
+        this.navigator = navigator;
     }
 
     @Override
@@ -42,7 +46,7 @@ public class LoginPresenterImpl implements LoginPresenter {
                 public void onLoginSuccess() {
                     Log.e("DEBUG", "success end login!");
                     view.hideLoading();
-                    //TODO Navigate to ebook list view
+                    navigator.navigateToEbookList();
                 }
 
                 @Override
