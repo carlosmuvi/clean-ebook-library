@@ -5,10 +5,8 @@ import carlosmuvi.bqsample.di.ActivityModule;
 import carlosmuvi.bqsample.di.EbookListModule;
 import carlosmuvi.bqsample.di.scopes.ActivityScope;
 import carlosmuvi.bqsample.interactors.GetEbooksUsecase;
-import carlosmuvi.bqsample.interactors.LoginUsecase;
 import carlosmuvi.bqsample.interactors.ReorderEbooksUsecase;
 import carlosmuvi.bqsample.presenters.EbookListPresenter;
-import carlosmuvi.bqsample.presenters.LoginPresenter;
 import carlosmuvi.bqsample.ui.activities.EbookListActivity;
 import dagger.Component;
 

@@ -7,8 +7,6 @@ import carlosmuvi.bqsample.di.scopes.ActivityScope;
 import carlosmuvi.bqsample.interactors.LoginUsecase;
 import carlosmuvi.bqsample.presenters.LoginPresenter;
 import carlosmuvi.bqsample.ui.activities.LoginActivity;
-import carlosmuvi.data.dropbox.DropboxDatasource;
-import carlosmuvi.data.dropbox.mapper.DropboxBookMapper;
 import dagger.Component;
 
 /**

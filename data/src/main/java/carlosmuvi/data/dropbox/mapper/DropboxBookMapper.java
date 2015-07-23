@@ -17,7 +17,7 @@ import nl.siegmann.epublib.domain.Author;
 public class DropboxBookMapper {
 
     @Inject
-    DropboxBookMapper(){
+    DropboxBookMapper() {
 
     }
 

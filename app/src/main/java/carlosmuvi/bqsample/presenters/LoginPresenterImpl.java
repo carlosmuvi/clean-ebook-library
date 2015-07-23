@@ -5,7 +5,6 @@ import android.util.Log;
 import javax.inject.Inject;
 
 import carlosmuvi.bqsample.interactors.LoginUsecase;
-import carlosmuvi.bqsample.navigation.BqSampleNavigator;
 import carlosmuvi.bqsample.navigation.Navigator;
 
 /**

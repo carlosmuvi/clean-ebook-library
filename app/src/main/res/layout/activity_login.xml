@@ -12,6 +12,7 @@
 
     <Button
         android:layout_width="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_height="wrap_content"
         android:text="Login with Dropbox"
         android:id="@+id/loginBtn"

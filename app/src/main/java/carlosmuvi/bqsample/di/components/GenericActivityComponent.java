@@ -4,7 +4,6 @@ import android.app.Activity;
 
 import carlosmuvi.bqsample.di.ActivityModule;
 import carlosmuvi.bqsample.di.scopes.ActivityScope;
-import carlosmuvi.bqsample.navigation.BqSampleNavigator;
 import carlosmuvi.bqsample.navigation.Navigator;
 import dagger.Component;
 

@@ -30,8 +30,8 @@ public class ReorderEbooksUsecaseImpl implements ReorderEbooksUsecase {
 
     @Inject
     public ReorderEbooksUsecaseImpl(EbookDatasource ebookDatasource,
-                            MainThread mainThread,
-                            ThreadExecutor threadExecutor) {
+                                    MainThread mainThread,
+                                    ThreadExecutor threadExecutor) {
 
         this.ebookDatasource = ebookDatasource;
         this.mainThread = mainThread;

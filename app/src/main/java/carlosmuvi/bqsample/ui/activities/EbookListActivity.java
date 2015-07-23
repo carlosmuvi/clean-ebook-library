@@ -2,14 +2,20 @@ package carlosmuvi.bqsample.ui.activities;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
+import butterknife.Bind;
 import carlosmuvi.bqsample.BqSampleApp;
 import carlosmuvi.bqsample.R;
 import carlosmuvi.bqsample.di.ActivityModule;
@@ -18,6 +24,8 @@ import carlosmuvi.bqsample.di.components.EbookListComponent;
 import carlosmuvi.bqsample.model.Ebook;
 import carlosmuvi.bqsample.presenters.EbookListPresenter;
 import carlosmuvi.bqsample.ui.activities.base.BaseActivity;
+import carlosmuvi.bqsample.ui.adapters.EbookAdapter;
+import carlosmuvi.bqsample.ui.adapters.OnRecyclerViewItemClickListener;
 
 public class EbookListActivity extends BaseActivity implements EbookListPresenter.View {
 
@@ -48,6 +56,12 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
      * *********************
      */
 
+    private static final int VIEWTYPE_LIST = 10;
+    private static final int VIEWTYPE_GRID = 11;
+
+    @Bind(R.id.ebook_list_rv)
+    public RecyclerView recyclerView;
+
     ProgressDialog progressDialog;
 
     @Override
@@ -57,6 +71,8 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
         component().inject(this);
 
         presenter.setView(this);
+
+        presenter.getEbooks();
 
     }
 
@@ -71,8 +87,10 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_showAs_list:
+                switchView(VIEWTYPE_LIST);
                 break;
             case R.id.action_showAs_grid:
+                switchView(VIEWTYPE_GRID);
                 break;
             case R.id.action_orderBy_title:
                 break;
@@ -90,42 +108,70 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
         return R.layout.activity_ebook_list;
     }
 
-
     /**
      * *********************
      * View Inherited
      * *********************
      */
 
-
     @Override
     public void showEbooks(List<Ebook> ebooks) {
+        final EbookAdapter adapter;
+        recyclerView.setAdapter(adapter = new EbookAdapter(ebooks, R.layout.view_ebook_list));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
 
+        adapter.setOnItemClickListener(new OnRecyclerViewItemClickListener<Ebook>() {
+            @Override
+            public void onItemClick(View view, Ebook ebook) {
+                presenter.onEbookClick(ebook);
+            }
+        });
     }
 
     @Override
     public void reloadEbooks(List<Ebook> ebooks) {
-
+        ((EbookAdapter) recyclerView.getAdapter()).setEbooks(ebooks);
     }
 
     @Override
     public void showLoading() {
-
-    }
-
-    @Override
-    public void hideLoading() {
-
+        progressDialog = ProgressDialog.show(this, "Loading ebooks", "Please wait", true);
     }
 
     @Override
     public void updateLoading(String message) {
-
+        progressDialog.setMessage(message);
     }
 
     @Override
-    public void switchView() {
+    public void hideLoading() {
+        if (progressDialog != null) {
+            progressDialog.dismiss();
+        }
+    }
 
+    @Override
+    public void switchView(int viewType) {
+        List<Ebook> ebooks = ((EbookAdapter) recyclerView.getAdapter()).getItems();
+        final EbookAdapter adapter;
+
+        if (viewType == VIEWTYPE_GRID) {
+            recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
+            recyclerView.setAdapter(adapter = new EbookAdapter(ebooks, R.layout.view_ebook_grid));
+        } else if (viewType == VIEWTYPE_LIST) {
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(adapter = new EbookAdapter(ebooks, R.layout.view_ebook_list));
+        } else {
+            return;
+        }
+
+        adapter.setOnItemClickListener(new OnRecyclerViewItemClickListener<Ebook>() {
+            @Override
+            public void onItemClick(View view, Ebook ebook) {
+                presenter.onEbookClick(ebook);
+            }
+        });
     }
 
 }

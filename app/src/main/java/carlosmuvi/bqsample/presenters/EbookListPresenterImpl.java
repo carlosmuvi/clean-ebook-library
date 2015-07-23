@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import carlosmuvi.bqsample.interactors.GetEbooksUsecase;
 import carlosmuvi.bqsample.interactors.ReorderEbooksUsecase;
 import carlosmuvi.bqsample.model.Ebook;
+import carlosmuvi.bqsample.navigation.Navigator;
 
 /**
  * Created by carlos.
@@ -18,16 +19,22 @@ public class EbookListPresenterImpl implements EbookListPresenter {
     View view;
     GetEbooksUsecase getEbooksUsecase;
     ReorderEbooksUsecase reorderEbooksUsecase;
+    Navigator navigator;
 
     @Inject
-    public EbookListPresenterImpl(GetEbooksUsecase getEbooksUsecase, ReorderEbooksUsecase reorderEbooksUsecase) {
+    public EbookListPresenterImpl(GetEbooksUsecase getEbooksUsecase,
+                                  ReorderEbooksUsecase reorderEbooksUsecase,
+                                  Navigator navigator) {
         this.getEbooksUsecase = getEbooksUsecase;
         this.reorderEbooksUsecase = reorderEbooksUsecase;
+        this.navigator = navigator;
     }
 
     @Override
     public void getEbooks() {
+
         final int[] proccessedEbooks = {0};
+
         view.showLoading();
         getEbooksUsecase.execute(new GetEbooksUsecase.Callback() {
             @Override
@@ -71,5 +78,10 @@ public class EbookListPresenterImpl implements EbookListPresenter {
     @Override
     public void setView(View view) {
         this.view = view;
+    }
+
+    @Override
+    public void onEbookClick(Ebook ebook) {
+        navigator.navigateToEbookDetails(ebook);
     }
 }

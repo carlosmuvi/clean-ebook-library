@@ -15,6 +15,8 @@ public interface EbookListPresenter {
 
     void setView(View view);
 
+    void onEbookClick(Ebook ebook);
+
     public interface View {
 
         void showEbooks(List<Ebook> ebooks);
@@ -27,7 +29,6 @@ public interface EbookListPresenter {
 
         void updateLoading(String message);
 
-        void switchView();
-
+        void switchView(int viewType);
     }
 }
