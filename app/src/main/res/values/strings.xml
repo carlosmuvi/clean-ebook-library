@@ -12,5 +12,6 @@
     <string name="show_as">Show as</string>
     <string name="show_as_grid">Show as grid</string>
     <string name="show_as_list">Show as list</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus urna in sapien viverra facilisis. Proin vitae mollis risus. Nulla felis tellus, placerat quis nibh vel, tincidunt condimentum odio. Donec sagittis viverra nisl, non ultrices eros convallis et. In nisl sem, ornare vitae feugiat eu, rhoncus vel est.</string>
 
 </resources>

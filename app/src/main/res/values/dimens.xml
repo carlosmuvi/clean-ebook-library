@@ -6,4 +6,7 @@
     <dimen name="item_ebook_width">100dp</dimen>
     <dimen name="item_ebook_height">150dp</dimen>
 
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+
 </resources>
