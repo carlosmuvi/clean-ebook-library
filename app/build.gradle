@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.trello.victor'
 
 android {
     compileSdkVersion parent.ext.androidCompileSdkVersion
@@ -22,6 +23,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            svg.srcDir 'src/main/svg'
         }
     }
 

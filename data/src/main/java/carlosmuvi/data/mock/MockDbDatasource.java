@@ -34,7 +34,7 @@ public class MockDbDatasource implements EbookDatasource {
     @Override
     public void listAllEbooks(EbookListCallback callback) {
         List<Ebook> books = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 5; i > 0; i--) {
 
             Ebook ebook = new Ebook();
             ebook.setTitle("TITLE " + i);

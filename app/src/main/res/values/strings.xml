@@ -6,5 +6,11 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_ebook_list">Your Ebooks</string>
     <string name="title_activity_ebook_details">Ebook Details</string>
+    <string name="order_by_date">Order by date</string>
+    <string name="order_by_title">Order by title</string>
+    <string name="order_by">Order by</string>
+    <string name="show_as">Show as</string>
+    <string name="show_as_grid">Show as grid</string>
+    <string name="show_as_list">Show as list</string>
 
 </resources>

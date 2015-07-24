@@ -4,39 +4,35 @@
     tools:context="carlosmuvi.bqsample.ui.activities.EbookListActivity">
     <item
         android:id="@+id/group_orderBy"
-        android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:icon="@drawable/ic_sort_by_24px"
         android:orderInCategory="100"
-        android:title="Order by"
+        android:title="@string/order_by"
         app:showAsAction="always">
         <menu>
             <item
                 android:id="@+id/action_orderBy_title"
-                android:icon="@drawable/abc_ic_clear_mtrl_alpha"
-                android:title="Order by title"
+                android:title="@string/order_by_title"
                 app:showAsAction="ifRoom|withText" />
             <item
                 android:id="@+id/action_orderBy_date"
-                android:icon="@drawable/abc_ic_clear_mtrl_alpha"
-                android:title="Order by date"
+                android:title="@string/order_by_date"
                 app:showAsAction="ifRoom|withText" />
         </menu>
     </item>
     <item
         android:id="@+id/group_showAs"
-        android:icon="@drawable/abc_ic_menu_cut_mtrl_alpha"
+        android:icon="@drawable/ic_list_48px"
         android:orderInCategory="101"
-        android:title="Order by"
+        android:title="@string/show_as"
         app:showAsAction="always">
         <menu>
             <item
                 android:id="@+id/action_showAs_grid"
-                android:icon="@drawable/abc_ic_clear_mtrl_alpha"
-                android:title="Show as grid"
+                android:title="@string/show_as_grid"
                 app:showAsAction="ifRoom|withText" />
             <item
                 android:id="@+id/action_showAs_list"
-                android:icon="@drawable/abc_ic_clear_mtrl_alpha"
-                android:title="Show as list"
+                android:title="@string/show_as_list"
                 app:showAsAction="ifRoom|withText" />
         </menu>
     </item>

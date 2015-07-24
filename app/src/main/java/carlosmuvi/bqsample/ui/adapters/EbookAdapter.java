@@ -42,10 +42,10 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.ViewHolder> 
         holder.tv_ebook_title.setText(ebook.getTitle());
         if (ebook.getCover() != null) {
             Glide.with(holder.img_ebook_cover.getContext())
-                    .load(ebook.getCover()).centerCrop().into(holder.img_ebook_cover);
+                    .load(ebook.getCover()).fitCenter().into(holder.img_ebook_cover);
         } else {
             Glide.with(holder.img_ebook_cover.getContext())
-                    .load(R.drawable.no_cover).centerCrop().into(holder.img_ebook_cover);
+                    .load(R.drawable.no_cover).fitCenter().into(holder.img_ebook_cover);
         }
         holder.itemView.setTag(ebook);
     }

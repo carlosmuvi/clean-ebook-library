@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="carlosmuvi.bqsample">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:name=".BqSampleApp"
@@ -10,13 +12,13 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.activities.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".ui.activities.EbookListActivity"
-            android:label="@string/title_activity_ebook_list"></activity>
+            android:label="@string/title_activity_ebook_list" />
         <activity
             android:name=".ui.activities.EbookDetailsActivity"
-            android:label="@string/title_activity_ebook_details"></activity>
+            android:label="@string/title_activity_ebook_details" />
 
     </application>
 

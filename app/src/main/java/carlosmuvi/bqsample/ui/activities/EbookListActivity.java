@@ -99,10 +99,8 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
             case R.id.action_orderBy_date:
                 presenter.reorderEbooks(((EbookAdapter) recyclerView.getAdapter()).getItems(), ReorderEbooksUsecaseImpl.ORDERBY_DATE);
                 break;
-            default:
-                return super.onOptionsItemSelected(item);
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 
 
