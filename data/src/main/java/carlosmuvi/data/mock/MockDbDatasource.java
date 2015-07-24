@@ -1,6 +1,4 @@
-package carlosmuvi.data.dropbox;
-
-import android.app.Activity;
+package carlosmuvi.data.mock;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,11 +16,9 @@ import carlosmuvi.bqsample.model.Ebook;
  */
 public class MockDbDatasource implements EbookDatasource {
 
-    private Activity activity;
-
     @Inject
-    public MockDbDatasource(Activity activity) {
-        this.activity = activity;
+    public MockDbDatasource() {
+
     }
 
     @Override
