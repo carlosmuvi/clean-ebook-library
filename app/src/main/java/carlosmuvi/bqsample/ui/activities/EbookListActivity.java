@@ -21,6 +21,7 @@ import carlosmuvi.bqsample.R;
 import carlosmuvi.bqsample.di.ActivityModule;
 import carlosmuvi.bqsample.di.components.DaggerEbookListComponent;
 import carlosmuvi.bqsample.di.components.EbookListComponent;
+import carlosmuvi.bqsample.interactors.ReorderEbooksUsecaseImpl;
 import carlosmuvi.bqsample.model.Ebook;
 import carlosmuvi.bqsample.presenters.EbookListPresenter;
 import carlosmuvi.bqsample.ui.activities.base.BaseActivity;
@@ -93,8 +94,10 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
                 switchView(VIEWTYPE_GRID);
                 break;
             case R.id.action_orderBy_title:
+                presenter.reorderEbooks(((EbookAdapter) recyclerView.getAdapter()).getItems(), ReorderEbooksUsecaseImpl.ORDERBY_TITLE);
                 break;
             case R.id.action_orderBy_date:
+                presenter.reorderEbooks(((EbookAdapter) recyclerView.getAdapter()).getItems(), ReorderEbooksUsecaseImpl.ORDERBY_DATE);
                 break;
             default:
                 return super.onOptionsItemSelected(item);
