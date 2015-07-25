@@ -2,6 +2,7 @@ package carlosmuvi.bqsample.di;
 
 import carlosmuvi.bqsample.di.scopes.ActivityScope;
 import carlosmuvi.bqsample.presenters.EbookDetailsPresenter;
+import carlosmuvi.bqsample.presenters.EbookDetailsPresenterImpl;
 import dagger.Module;
 import dagger.Provides;
 
@@ -12,11 +13,10 @@ import dagger.Provides;
 public class EbookDetailsModule {
 
     //PRESENTER
-
     @Provides
     @ActivityScope
     EbookDetailsPresenter provideEbookDetailPresenter(
-            EbookDetailsPresenter presenter) {
+            EbookDetailsPresenterImpl presenter) {
         return presenter;
     }
 

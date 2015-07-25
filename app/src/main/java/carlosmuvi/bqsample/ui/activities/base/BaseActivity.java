@@ -31,6 +31,11 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected abstract int getLayoutResource();
 
+    protected void setHomeAsUpIndicator(){
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+    }
+
     protected void setActionBarIcon(int iconRes) {
         toolbar.setNavigationIcon(iconRes);
     }

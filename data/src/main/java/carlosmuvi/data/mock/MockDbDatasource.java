@@ -37,10 +37,10 @@ public class MockDbDatasource implements EbookDatasource {
         for (int i = 5; i > 0; i--) {
 
             Ebook ebook = new Ebook();
-            ebook.setTitle("TITLE " + i);
-            ebook.setAuthor("AUTHOR " + i);
-            ebook.setPath("PATH " + i);
-            ebook.setCreated(new Date());
+            ebook.setTitle("Don Quijote de la Mancha, Parte " + i);
+            ebook.setAuthor("Miguel de Cervantes Saavedra ");
+            ebook.setPath("/very/very/long/path/in/dropbox ");
+            ebook.setCreated(new Date(100000 * i));
             books.add(ebook);
             callback.onNext();
         }
