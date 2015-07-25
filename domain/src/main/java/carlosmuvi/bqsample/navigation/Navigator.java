@@ -6,9 +6,9 @@ import carlosmuvi.bqsample.model.Ebook;
  * Created by carlos.
  */
 public interface Navigator {
-    public void navigateToEbookList();
+  void navigateToEbookList();
 
-    public void navigateToEbookDetails(Ebook ebook);
+  void navigateToEbookDetails(Ebook ebook);
 
-    public Ebook getEbookExtra();
+  Ebook getEbookExtra();
 }

@@ -5,6 +5,6 @@ sourceCompatibility = JavaVersion.VERSION_1_7
 targetCompatibility = JavaVersion.VERSION_1_7
 
 dependencies {
-    providedCompile parent.ext.libDaggerCompiler
-    compile parent.ext.libDagger
+  providedCompile parent.ext.libDaggerCompiler
+  compile parent.ext.libDagger
 }

@@ -1,34 +1,33 @@
 package carlosmuvi.bqsample.presenters;
 
-import java.util.List;
-
 import carlosmuvi.bqsample.model.Ebook;
+import java.util.List;
 
 /**
  * Created by carlos.
  */
 public interface EbookListPresenter {
 
-    void getEbooks();
+  void getEbooks();
 
-    void reorderEbooks(List<Ebook> ebooks, int orderBy);
+  void reorderEbooks(List<Ebook> ebooks, int orderBy);
 
-    void setView(View view);
+  void setView(View view);
 
-    void onEbookClick(Ebook ebook);
+  void onEbookClick(Ebook ebook);
 
-    public interface View {
+  interface View {
 
-        void showEbooks(List<Ebook> ebooks);
+    void showEbooks(List<Ebook> ebooks);
 
-        void reloadEbooks(List<Ebook> ebooks);
+    void reloadEbooks(List<Ebook> ebooks);
 
-        void showLoading();
+    void showLoading();
 
-        void hideLoading();
+    void hideLoading();
 
-        void updateLoading(String message);
+    void updateLoading(String message);
 
-        void switchView(int viewType);
-    }
+    void switchView(int viewType);
+  }
 }

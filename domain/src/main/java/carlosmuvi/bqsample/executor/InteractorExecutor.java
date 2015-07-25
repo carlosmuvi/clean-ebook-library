@@ -5,5 +5,5 @@ package carlosmuvi.bqsample.executor;
  */
 public interface InteractorExecutor {
 
-    void run(Runnable runnable);
+  void run(Runnable runnable);
 }

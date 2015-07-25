@@ -12,18 +12,15 @@ import dagger.Component;
 /**
  * Created by carlos.
  */
-@ActivityScope
-@Component(dependencies = ApplicationComponent.class, modules = {
-        ActivityModule.class, LoginModule.class
-})
-public interface LoginComponent extends GenericActivityComponent {
+@ActivityScope @Component(dependencies = ApplicationComponent.class, modules = {
+    ActivityModule.class, LoginModule.class
+}) public interface LoginComponent extends GenericActivityComponent {
 
-    void inject(LoginActivity loginActivity);
+  void inject(LoginActivity loginActivity);
 
-    LoginUsecase getloginUsecase();
+  LoginUsecase getloginUsecase();
 
-    LoginPresenter getloginPresenter();
+  LoginPresenter getloginPresenter();
 
-    EbookDatasource datasource();
-
+  EbookDatasource datasource();
 }

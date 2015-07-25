@@ -10,18 +10,16 @@ import dagger.Component;
 /**
  * Created by carlos.
  */
-@ActivityScope
-@Component(dependencies = ApplicationComponent.class, modules = {
-        ActivityModule.class, EbookDetailsModule.class
-})
-public interface EbookDetailsComponent extends GenericActivityComponent {
+@ActivityScope @Component(dependencies = ApplicationComponent.class, modules = {
+    ActivityModule.class, EbookDetailsModule.class
+}) public interface EbookDetailsComponent extends GenericActivityComponent {
 
-    void inject(EbookDetailsActivity ebookDetailsActivity);
+  void inject(EbookDetailsActivity ebookDetailsActivity);
 
-    // PRESENTER
-    EbookDetailsPresenter getPresenter();
+  // PRESENTER
+  EbookDetailsPresenter getPresenter();
 
-    // USECASES
+  // USECASES
 
-    // DATASOURCE
+  // DATASOURCE
 }

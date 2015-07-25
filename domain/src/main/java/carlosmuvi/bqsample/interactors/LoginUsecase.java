@@ -7,13 +7,13 @@ import carlosmuvi.bqsample.executor.Interactor;
  */
 public interface LoginUsecase extends Interactor {
 
-    interface Callback {
-        void onLoginSuccess();
+  interface Callback {
+    void onLoginSuccess();
 
-        void onError();
-    }
+    void onError();
+  }
 
-    void executeStartLogin();
+  void executeStartLogin();
 
-    void executeEndLogin(Callback callback);
+  void executeEndLogin(Callback callback);
 }

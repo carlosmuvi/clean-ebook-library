@@ -13,20 +13,17 @@ import dagger.Component;
 /**
  * Created by carlos.
  */
-@ActivityScope
-@Component(dependencies = ApplicationComponent.class, modules = {
-        ActivityModule.class, EbookListModule.class
-})
-public interface EbookListComponent extends GenericActivityComponent {
+@ActivityScope @Component(dependencies = ApplicationComponent.class, modules = {
+    ActivityModule.class, EbookListModule.class
+}) public interface EbookListComponent extends GenericActivityComponent {
 
-    void inject(EbookListActivity ebookListActivity);
+  void inject(EbookListActivity ebookListActivity);
 
-    GetEbooksUsecase getEbooksUsecase();
+  GetEbooksUsecase getEbooksUsecase();
 
-    ReorderEbooksUsecase reorderEbooksUsecase();
+  ReorderEbooksUsecase reorderEbooksUsecase();
 
-    EbookListPresenter ebookListPresenter();
+  EbookListPresenter ebookListPresenter();
 
-    EbookDatasource ebookDatasource();
-
+  EbookDatasource ebookDatasource();
 }

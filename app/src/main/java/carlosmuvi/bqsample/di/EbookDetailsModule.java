@@ -9,16 +9,13 @@ import dagger.Provides;
 /**
  * Created by carlos.
  */
-@Module
-public class EbookDetailsModule {
+@Module public class EbookDetailsModule {
 
-    //PRESENTER
-    @Provides
-    @ActivityScope
-    EbookDetailsPresenter provideEbookDetailPresenter(
-            EbookDetailsPresenterImpl presenter) {
-        return presenter;
-    }
+  //PRESENTER
+  @Provides @ActivityScope EbookDetailsPresenter provideEbookDetailPresenter(
+      EbookDetailsPresenterImpl presenter) {
+    return presenter;
+  }
 
-    //USECASES
+  //USECASES
 }

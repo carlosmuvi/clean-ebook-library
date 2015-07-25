@@ -2,21 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="carlosmuvi.bqsample.ui.activities.LoginActivity">
+    tools:context="carlosmuvi.bqsample.ui.activities.LoginActivity"
+    >
 
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimaryDark" />
+  <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/colorPrimaryDark"
+      />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:layout_height="wrap_content"
-        android:text="Login with Dropbox"
-        android:id="@+id/loginBtn"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+  <Button
+      android:layout_width="wrap_content"
+      android:backgroundTint="@color/colorPrimary"
+      android:layout_height="wrap_content"
+      android:text="Login with Dropbox"
+      android:id="@+id/loginBtn"
+      android:layout_centerVertical="true"
+      android:layout_centerHorizontal="true"
+      />
 
 </RelativeLayout>

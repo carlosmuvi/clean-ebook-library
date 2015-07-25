@@ -3,50 +3,50 @@ apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'com.trello.victor'
 
 android {
-    compileSdkVersion parent.ext.androidCompileSdkVersion
-    buildToolsVersion parent.ext.androidBuildToolsVersion
+  compileSdkVersion parent.ext.androidCompileSdkVersion
+  buildToolsVersion parent.ext.androidBuildToolsVersion
 
-    defaultConfig {
-        applicationId parent.ext.androidApplicationId
-        minSdkVersion parent.ext.androidMinSdkVersion
-        targetSdkVersion parent.ext.androidTargetSdkVersion
-        versionCode parent.ext.androidVersionCode
-        versionName parent.ext.androidVersionName
-    }
+  defaultConfig {
+    applicationId parent.ext.androidApplicationId
+    minSdkVersion parent.ext.androidMinSdkVersion
+    targetSdkVersion parent.ext.androidTargetSdkVersion
+    versionCode parent.ext.androidVersionCode
+    versionName parent.ext.androidVersionName
+  }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
-    }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_7
+    targetCompatibility JavaVersion.VERSION_1_7
+  }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
+  }
 
-    sourceSets {
-        main {
-            svg.srcDir 'src/main/svg'
-        }
+  sourceSets {
+    main {
+      svg.srcDir 'src/main/svg'
     }
+  }
 
-    packagingOptions {
-        exclude 'META-INF/services/javax.annotation.processing.Processor'
-    }
+  packagingOptions {
+    exclude 'META-INF/services/javax.annotation.processing.Processor'
+  }
 }
 
 dependencies {
-    compile project(':domain')
-    compile project(':data')
-    compile parent.ext.libRecyclerView
-    compile parent.ext.libCardView
-    compile parent.ext.libButterknife
-    provided parent.ext.libAnnotations
-    provided parent.ext.libDaggerCompiler
-    compile parent.ext.libDagger
-    compile parent.ext.libAppCompat
-    compile parent.ext.libGlide
-    compile parent.ext.libDesign
+  compile project(':domain')
+  compile project(':data')
+  compile parent.ext.libRecyclerView
+  compile parent.ext.libCardView
+  compile parent.ext.libButterknife
+  provided parent.ext.libAnnotations
+  provided parent.ext.libDaggerCompiler
+  compile parent.ext.libDagger
+  compile parent.ext.libAppCompat
+  compile parent.ext.libGlide
+  compile parent.ext.libDesign
 }

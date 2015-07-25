@@ -1,17 +1,17 @@
 <resources>
-    <string name="app_name">Bq Sample</string>
-    <string name="title_activity_login">BQ Ebook Library</string>
+  <string name="app_name">Bq Sample</string>
+  <string name="title_activity_login">BQ Ebook Library</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_ebook_list">Your Ebooks</string>
-    <string name="title_activity_ebook_details">Ebook Details</string>
-    <string name="order_by_date">Order by date</string>
-    <string name="order_by_title">Order by title</string>
-    <string name="order_by">Order by</string>
-    <string name="show_as">Show as</string>
-    <string name="show_as_grid">Show as grid</string>
-    <string name="show_as_list">Show as list</string>
-    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus urna in sapien viverra facilisis. Proin vitae mollis risus. Nulla felis tellus, placerat quis nibh vel, tincidunt condimentum odio. Donec sagittis viverra nisl, non ultrices eros convallis et. In nisl sem, ornare vitae feugiat eu, rhoncus vel est.</string>
+  <string name="hello_world">Hello world!</string>
+  <string name="action_settings">Settings</string>
+  <string name="title_activity_ebook_list">Your Ebooks</string>
+  <string name="title_activity_ebook_details">Ebook Details</string>
+  <string name="order_by_date">Order by date</string>
+  <string name="order_by_title">Order by title</string>
+  <string name="order_by">Order by</string>
+  <string name="show_as">Show as</string>
+  <string name="show_as_grid">Show as grid</string>
+  <string name="show_as_list">Show as list</string>
+  <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus urna in sapien viverra facilisis. Proin vitae mollis risus. Nulla felis tellus, placerat quis nibh vel, tincidunt condimentum odio. Donec sagittis viverra nisl, non ultrices eros convallis et. In nisl sem, ornare vitae feugiat eu, rhoncus vel est.</string>
 
 </resources>

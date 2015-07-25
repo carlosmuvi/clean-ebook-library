@@ -15,29 +15,27 @@ import dagger.Provides;
 /**
  * Created by carlos.
  */
-@Module
-public class EbookListModule {
+@Module public class EbookListModule {
 
-    //PRESENTER
-    @Provides @ActivityScope
-    EbookListPresenter provideEbookListPresenter(EbookListPresenterImpl presenter) {
-        return presenter;
-    }
+  //PRESENTER
+  @Provides @ActivityScope EbookListPresenter provideEbookListPresenter(
+      EbookListPresenterImpl presenter) {
+    return presenter;
+  }
 
-    //USECASES
-    @Provides @ActivityScope
-    GetEbooksUsecase provideEbooksUsecase(GetEbooksUsecaseImpl usecase) {
-        return usecase;
-    }
+  //USECASES
+  @Provides @ActivityScope GetEbooksUsecase provideEbooksUsecase(GetEbooksUsecaseImpl usecase) {
+    return usecase;
+  }
 
-    @Provides @ActivityScope
-    ReorderEbooksUsecase provideReorderUsecase(ReorderEbooksUsecaseImpl usecase) {
-        return usecase;
-    }
+  @Provides @ActivityScope ReorderEbooksUsecase provideReorderUsecase(
+      ReorderEbooksUsecaseImpl usecase) {
+    return usecase;
+  }
 
-    //DATASOURCE AND MAPPER
-    @Provides @ActivityScope
-    EbookDatasource provideEbookDatasource(DropboxDatasource dropboxDatasource) {
-        return dropboxDatasource;
-    }
+  //DATASOURCE AND MAPPER
+  @Provides @ActivityScope EbookDatasource provideEbookDatasource(
+      DropboxDatasource dropboxDatasource) {
+    return dropboxDatasource;
+  }
 }

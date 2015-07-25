@@ -5,19 +5,18 @@ package carlosmuvi.bqsample.presenters;
  */
 public interface LoginPresenter {
 
-    void setView(View view);
+  void setView(View view);
 
-    void login();
+  void login();
 
-    void onResume();
+  void onResume();
 
-    interface View {
+  interface View {
 
-        void showLoading();
+    void showLoading();
 
-        void hideLoading();
+    void hideLoading();
 
-        void showMessage(String message);
-
-    }
+    void showMessage(String message);
+  }
 }

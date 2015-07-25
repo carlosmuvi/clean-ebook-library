@@ -7,12 +7,12 @@ import carlosmuvi.bqsample.model.Ebook;
  */
 public interface EbookDetailsPresenter {
 
-    void onResume();
+  void onResume();
 
-    void setView(View view);
+  void setView(View view);
 
-    interface View {
+  interface View {
 
-        void showBook(Ebook ebook);
-    }
+    void showBook(Ebook ebook);
+  }
 }

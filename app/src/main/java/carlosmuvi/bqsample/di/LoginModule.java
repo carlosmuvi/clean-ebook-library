@@ -13,24 +13,21 @@ import dagger.Provides;
 /**
  * Created by carlos.
  */
-@Module
-public class LoginModule {
+@Module public class LoginModule {
 
-    //PRESENTER
-    @Provides @ActivityScope
-    LoginPresenter provideLoginPresenter(LoginPresenterImpl presenter) {
-        return presenter;
-    }
+  //PRESENTER
+  @Provides @ActivityScope LoginPresenter provideLoginPresenter(LoginPresenterImpl presenter) {
+    return presenter;
+  }
 
-    //USECASES
-    @Provides @ActivityScope
-    LoginUsecase provideLoginUsecase(LoginUsecaseImpl loginUsecase) {
-        return loginUsecase;
-    }
+  //USECASES
+  @Provides @ActivityScope LoginUsecase provideLoginUsecase(LoginUsecaseImpl loginUsecase) {
+    return loginUsecase;
+  }
 
-    //DATASOURCE AND MAPPER
-    @Provides @ActivityScope
-    EbookDatasource provideEbookDatasource(DropboxDatasource dropboxDatasource) {
-        return dropboxDatasource;
-    }
+  //DATASOURCE AND MAPPER
+  @Provides @ActivityScope EbookDatasource provideEbookDatasource(
+      DropboxDatasource dropboxDatasource) {
+    return dropboxDatasource;
+  }
 }
