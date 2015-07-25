@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import butterknife.Bind;
 import carlosmuvi.bqsample.BqSampleApp;
 import carlosmuvi.bqsample.R;
@@ -22,6 +22,7 @@ import carlosmuvi.bqsample.presenters.EbookListPresenter;
 import carlosmuvi.bqsample.ui.activities.base.BaseActivity;
 import carlosmuvi.bqsample.ui.adapters.EbookAdapter;
 import carlosmuvi.bqsample.ui.adapters.OnRecyclerViewItemClickListener;
+import carlosmuvi.bqsample.ui.customviews.EbookRecyclerView;
 import java.util.List;
 import javax.inject.Inject;
 
@@ -56,7 +57,8 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
   private static final int VIEWTYPE_LIST = 10;
   private static final int VIEWTYPE_GRID = 11;
 
-  @Bind(R.id.ebook_list_rv) public RecyclerView recyclerView;
+  @Bind(R.id.ebook_list_rv) public EbookRecyclerView recyclerView;
+  @Bind(R.id.empty_list_tv) public TextView emptyListTv;
 
   ProgressDialog progressDialog;
 
@@ -108,6 +110,7 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
 
   @Override public void showEbooks(List<Ebook> ebooks) {
     final EbookAdapter adapter;
+    recyclerView.setEmptyView(emptyListTv);
     recyclerView.setAdapter(adapter = new EbookAdapter(ebooks, R.layout.view_ebook_list));
     recyclerView.setLayoutManager(new LinearLayoutManager(this));
     recyclerView.setItemAnimator(new DefaultItemAnimator());

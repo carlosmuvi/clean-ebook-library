@@ -5,30 +5,51 @@ import android.content.res.TypedArray;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
+import android.view.View;
 
 /**
  * Created by carlos.
  */
-public class AutofitRecyclerView extends RecyclerView {
+public class EbookRecyclerView extends RecyclerView {
+
   private GridLayoutManager manager;
   private int columnWidth = -1;
 
-  public AutofitRecyclerView(Context context) {
+  private View emptyView;
+
+  private AdapterDataObserver emptyObserver = new AdapterDataObserver() {
+
+    @Override public void onChanged() {
+      Adapter<?> adapter = getAdapter();
+      if (adapter != null && emptyView != null) {
+        if (adapter.getItemCount() == 0) {
+          emptyView.setVisibility(View.VISIBLE);
+          EbookRecyclerView.this.setVisibility(View.GONE);
+        } else {
+          emptyView.setVisibility(View.GONE);
+          EbookRecyclerView.this.setVisibility(View.VISIBLE);
+        }
+      }
+    }
+  };
+
+  public EbookRecyclerView(Context context) {
     super(context);
     init(context, null);
   }
 
-  public AutofitRecyclerView(Context context, AttributeSet attrs) {
+  public EbookRecyclerView(Context context, AttributeSet attrs) {
     super(context, attrs);
     init(context, attrs);
   }
 
-  public AutofitRecyclerView(Context context, AttributeSet attrs, int defStyle) {
+  public EbookRecyclerView(Context context, AttributeSet attrs, int defStyle) {
     super(context, attrs, defStyle);
     init(context, attrs);
   }
 
   private void init(Context context, AttributeSet attrs) {
+
     if (attrs != null) {
       int[] attrsArray = {
           android.R.attr.columnWidth
@@ -40,6 +61,20 @@ public class AutofitRecyclerView extends RecyclerView {
 
     manager = new GridLayoutManager(getContext(), 1);
     setLayoutManager(manager);
+  }
+
+  @Override public void setAdapter(Adapter adapter) {
+    super.setAdapter(adapter);
+
+    if (adapter != null) {
+      adapter.registerAdapterDataObserver(emptyObserver);
+    }
+
+    emptyObserver.onChanged();
+  }
+
+  public void setEmptyView(View emptyView) {
+    this.emptyView = emptyView;
   }
 
   @Override protected void onMeasure(int widthSpec, int heightSpec) {

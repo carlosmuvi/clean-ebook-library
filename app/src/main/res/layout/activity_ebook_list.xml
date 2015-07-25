@@ -14,12 +14,21 @@
       android:background="?attr/colorPrimaryDark"
       />
 
-  <carlosmuvi.bqsample.ui.customviews.AutofitRecyclerView
+  <carlosmuvi.bqsample.ui.customviews.EbookRecyclerView
       android:id="@+id/ebook_list_rv"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_below="@+id/toolbar"
       android:columnWidth="@dimen/item_ebook_width"
+      />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:layout_below="@+id/toolbar"
+      android:id="@+id/empty_list_tv"
+      android:text="@string/empty_list"
       />
 
 </RelativeLayout>
