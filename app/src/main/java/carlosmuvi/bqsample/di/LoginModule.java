@@ -1,6 +1,7 @@
 package carlosmuvi.bqsample.di;
 
 import carlosmuvi.bqsample.datasource.EbookDatasource;
+import carlosmuvi.bqsample.di.scopes.ActivityScope;
 import carlosmuvi.bqsample.interactors.LoginUsecase;
 import carlosmuvi.bqsample.interactors.LoginUsecaseImpl;
 import carlosmuvi.bqsample.presenters.LoginPresenter;
@@ -16,19 +17,19 @@ import dagger.Provides;
 public class LoginModule {
 
     //PRESENTER
-    @Provides
+    @Provides @ActivityScope
     LoginPresenter provideLoginPresenter(LoginPresenterImpl presenter) {
         return presenter;
     }
 
     //USECASES
-    @Provides
+    @Provides @ActivityScope
     LoginUsecase provideLoginUsecase(LoginUsecaseImpl loginUsecase) {
         return loginUsecase;
     }
 
     //DATASOURCE AND MAPPER
-    @Provides
+    @Provides @ActivityScope
     EbookDatasource provideEbookDatasource(DropboxDatasource dropboxDatasource) {
         return dropboxDatasource;
     }
