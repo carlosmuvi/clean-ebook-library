@@ -1,5 +1,7 @@
 # BQ Ebook Library Sample
 
+## Screenshots
+
 ## Introduction
 
 This project has been built following the **"Clean architecture"** values.
