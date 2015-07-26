@@ -9,22 +9,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49495333-9e9e-4f7f-a8d4-5d619b9eb4c3" name="Default" comment="added untracked drawables">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/navigation/BqSampleNavigator.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/navigation/BqSampleNavigator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/EbookDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/EbookDetailsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/components/EbookDetailsComponent.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/components/EbookDetailsComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/EbookDetailsModule.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/EbookDetailsModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/EbookListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/EbookListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/components/EbookListComponent.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/components/EbookListComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/EbookListModule.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/EbookListModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/presenters/EbookListPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/presenters/EbookListPresenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/presenters/EbookListPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/presenters/EbookListPresenterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/components/LoginComponent.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/components/LoginComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/LoginModule.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/LoginModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/presenters/LoginPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/presenters/LoginPresenterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ebook_details.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ebook_details.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+    <list default="true" id="49495333-9e9e-4f7f-a8d4-5d619b9eb4c3" name="Default" comment="minor format changes">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bq Sample.iws" />
@@ -53,19 +39,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EbookListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/EbookListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="132" column="3" selection-start-line="132" selection-start-column="3" selection-end-line="132" selection-end-column="3" />
-              <folding>
-                <element signature="e#4219#4253#0" expanded="true" />
-                <element signature="e#4263#4294#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,18 +49,6 @@
           </provider>
           <provider editor-type-id="android-designer">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/LoginActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="96" selection-start-line="75" selection-start-column="96" selection-end-line="75" selection-end-column="96" />
-              <folding>
-                <element signature="e#1877#1907#0" expanded="true" />
-              </folding>
-            </state>
           </provider>
         </entry>
       </file>
@@ -161,12 +122,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EbookDetailsActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EbookDetailsActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/EbookDetailsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4305136">
+            <state vertical-scroll-proportion="0.0">
               <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+              <folding>
+                <marker date="1437870458000" expanded="true" signature="313628:313645" placeholder="..." />
+                <marker date="1437870458000" expanded="true" signature="313628:313663" placeholder="..." />
+                <marker date="1437870458000" expanded="true" signature="313628:313676" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47368422">
+              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+              <folding>
+                <element signature="e#357#375#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,6 +176,7 @@
     <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -2701,7 +2689,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/domain/src/main/java/carlosmuvi/bqsample/interactors/GetEbooksUsecase.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/carlosmuvi/bqsample/interactors/GetEbooksUsecaseImpl.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/carlosmuvi/bqsample/interactors/ReorderEbooksUsecase.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/carlosmuvi/bqsample/interactors/ReorderEbooksUsecaseImpl.java" />
@@ -2725,7 +2712,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/base/BaseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/presenters/EbookDetailsPresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/presenters/EbookDetailsPresenterImpl.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/di/components/ApplicationComponent.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/adapters/OnRecyclerViewItemClickListener.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/carlosmuvi/bqsample/navigation/Navigator.java" />
@@ -2752,6 +2738,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ebook_details.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/EbookDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -3948,7 +3936,13 @@
       <option name="project" value="LOCAL" />
       <updated>1437869050607</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="minor format changes">
+      <created>1437869890193</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1437869890193</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3971,19 +3965,19 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3995037" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3404864" sideWeight="0.40869564" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3404864" sideWeight="0.4103512" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1439206" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1439206" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287841" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Kotlin Bytecode" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3404864" sideWeight="0.59130436" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3404864" sideWeight="0.5896488" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287841" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -4016,7 +4010,8 @@
     <MESSAGE value="added empty book list behaviour" />
     <MESSAGE value="styled login button" />
     <MESSAGE value="added untracked drawables" />
-    <option name="LAST_COMMIT_MESSAGE" value="added untracked drawables" />
+    <MESSAGE value="minor format changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor format changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4042,14 +4037,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4197,14 +4184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56646526">
           <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -4448,9 +4427,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/carlosmuvi/bqsample/ui/activities/EbookDetailsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4305136">
+        <state vertical-scroll-proportion="0.0">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <marker date="1437870458000" expanded="true" signature="313628:313645" placeholder="..." />
+            <marker date="1437870458000" expanded="true" signature="313628:313663" placeholder="..." />
+            <marker date="1437870458000" expanded="true" signature="313628:313676" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47368422">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <folding>
+            <element signature="e#357#375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
