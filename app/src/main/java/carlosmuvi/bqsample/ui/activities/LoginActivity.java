@@ -72,7 +72,9 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.View {
    */
 
   @Override public void showLoading() {
-    progressDialog = ProgressDialog.show(this, "Logging in", "Please wait", true);
+    progressDialog =
+        ProgressDialog.show(this, getString(R.string.logging_in), getString(R.string.please_wait),
+            true);
   }
 
   @Override public void hideLoading() {

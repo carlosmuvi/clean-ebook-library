@@ -19,11 +19,14 @@ import dagger.Component;
 
   void inject(EbookListActivity ebookListActivity);
 
+  //PRESENTER
+  EbookListPresenter ebookListPresenter();
+
+  //USECASES
   GetEbooksUsecase getEbooksUsecase();
 
   ReorderEbooksUsecase reorderEbooksUsecase();
 
-  EbookListPresenter ebookListPresenter();
-
+  //DATASOURCE
   EbookDatasource ebookDatasource();
 }

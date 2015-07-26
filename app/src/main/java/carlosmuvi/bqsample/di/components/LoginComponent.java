@@ -18,9 +18,12 @@ import dagger.Component;
 
   void inject(LoginActivity loginActivity);
 
-  LoginUsecase getloginUsecase();
-
+  //PRESENTER
   LoginPresenter getloginPresenter();
 
+  //USECASES
+  LoginUsecase getloginUsecase();
+
+  //DATASOURCE
   EbookDatasource datasource();
 }

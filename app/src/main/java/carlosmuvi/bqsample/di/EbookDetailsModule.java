@@ -17,5 +17,4 @@ import dagger.Provides;
     return presenter;
   }
 
-  //USECASES
 }

@@ -36,13 +36,11 @@ public class LoginPresenterImpl implements LoginPresenter {
       view.showLoading();
       usecase.executeEndLogin(new LoginUsecase.Callback() {
         @Override public void onLoginSuccess() {
-          Log.e("DEBUG", "success end login!");
           view.hideLoading();
           navigator.navigateToEbookList();
         }
 
         @Override public void onError() {
-          Log.e("DEBUG", "error end login!");
           view.hideLoading();
           view.showMessage("Error authenticating with Dropbox");
         }

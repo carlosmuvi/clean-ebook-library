@@ -19,7 +19,4 @@ import dagger.Component;
   // PRESENTER
   EbookDetailsPresenter getPresenter();
 
-  // USECASES
-
-  // DATASOURCE
 }

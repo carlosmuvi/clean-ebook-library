@@ -25,7 +25,7 @@ import dagger.Provides;
     return loginUsecase;
   }
 
-  //DATASOURCE AND MAPPER
+  //DATASOURCE
   @Provides @ActivityScope EbookDatasource provideEbookDatasource(
       DropboxDatasource dropboxDatasource) {
     return dropboxDatasource;

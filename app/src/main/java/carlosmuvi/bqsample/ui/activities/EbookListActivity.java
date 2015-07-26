@@ -2,6 +2,7 @@ package carlosmuvi.bqsample.ui.activities;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -127,7 +128,8 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
   }
 
   @Override public void showLoading() {
-    progressDialog = ProgressDialog.show(this, "Loading ebooks", "Please wait", true);
+    progressDialog = ProgressDialog.show(this, getString(R.string.loading_ebooks),
+        getString(R.string.please_wait), true);
   }
 
   @Override public void updateLoading(String message) {
@@ -159,5 +161,9 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
         presenter.onEbookClick(ebook);
       }
     });
+  }
+
+  @Override public void showMessage(String message) {
+    Snackbar.make(this.getWindow().getDecorView(), message, Snackbar.LENGTH_LONG).show();
   }
 }

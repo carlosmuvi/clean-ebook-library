@@ -76,7 +76,7 @@ public class EbookDetailsActivity extends BaseActivity implements EbookDetailsPr
    */
 
   @Override public void showBook(Ebook ebook) {
-    SimpleDateFormat sdf = new SimpleDateFormat("ddmmyyyy", Locale.US);
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm", Locale.US);
 
     collapsingToolbar.setTitle(ebook.getTitle());
     author.setText(ebook.getAuthor());

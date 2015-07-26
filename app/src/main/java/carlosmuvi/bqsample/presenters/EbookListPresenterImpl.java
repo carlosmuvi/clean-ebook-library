@@ -38,7 +38,7 @@ public class EbookListPresenterImpl implements EbookListPresenter {
 
       @Override public void onError() {
         view.hideLoading();
-        Log.e("ERROR", "ERROR GETTING BOOKS");
+        view.showMessage("error getting books!");
       }
 
       @Override public void onEbookProcessed() {
@@ -58,7 +58,7 @@ public class EbookListPresenterImpl implements EbookListPresenter {
 
       @Override public void onError() {
         view.hideLoading();
-        Log.e("ERROR", "ERROR ORDERING BOOKS");
+        view.showMessage("error sorting books!");
       }
     }, ebooks, orderBy);
   }

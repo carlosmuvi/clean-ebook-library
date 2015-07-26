@@ -12,6 +12,7 @@ import javax.inject.Inject;
  */
 public class BqSampleNavigator implements Navigator {
 
+  public static final String INTENT_KEY_EBOOK = "ebook";
   Activity activity;
 
   @Inject public BqSampleNavigator(Activity activity) {
@@ -25,11 +26,11 @@ public class BqSampleNavigator implements Navigator {
 
   public void navigateToEbookDetails(Ebook ebook) {
     Intent intent = new Intent(activity, EbookDetailsActivity.class);
-    intent.putExtra("ebook", ebook);
+    intent.putExtra(INTENT_KEY_EBOOK, ebook);
     activity.startActivity(intent);
   }
 
   public Ebook getEbookExtra() {
-    return (Ebook) activity.getIntent().getSerializableExtra("ebook");
+    return (Ebook) activity.getIntent().getSerializableExtra(INTENT_KEY_EBOOK);
   }
 }

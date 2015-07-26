@@ -33,7 +33,7 @@ import dagger.Provides;
     return usecase;
   }
 
-  //DATASOURCE AND MAPPER
+  //DATASOURCE
   @Provides @ActivityScope EbookDatasource provideEbookDatasource(
       DropboxDatasource dropboxDatasource) {
     return dropboxDatasource;

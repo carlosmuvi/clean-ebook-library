@@ -29,5 +29,7 @@ public interface EbookListPresenter {
     void updateLoading(String message);
 
     void switchView(int viewType);
+
+    void showMessage(String message);
   }
 }
