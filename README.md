@@ -1,6 +1,9 @@
 # BQ Ebook Library Sample
 
 ## Screenshots
+<img src="https://raw.githubusercontent.com/carlospiles/bqsample/master/art/screenshot_ebook_list.png" width="400">
+<img src="https://raw.githubusercontent.com/carlospiles/bqsample/master/art/screenshot_ebook_details.png" width="400">
+<img src="https://raw.githubusercontent.com/carlospiles/bqsample/master/art/screenshot_ebooklist_grid.png" width="400">
 
 ## Introduction
 
