@@ -1,6 +1,5 @@
 package carlosmuvi.bqsample.presenters;
 
-import android.util.Log;
 import carlosmuvi.bqsample.interactors.GetEbooksUsecase;
 import carlosmuvi.bqsample.interactors.ReorderEbooksUsecase;
 import carlosmuvi.bqsample.model.Ebook;

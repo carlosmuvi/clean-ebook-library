@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/carlos/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/javax.inject-1-8757ab7f01df394a9a8ae4fc5fdf129019c0ad07.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/classes-d37729cfcf9a2438ff54dff9b2f7c7f4c462f664.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-a584c2be16897263ded504216d6c2e52eabd515d.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/BqSample/data/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b8e6d82833de84bf37f1a220d0e2d4d7e0fbb9f9">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/classes-b2ad89d695b0682c9aa1d82b8c4000e7e9222914.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/BqSample/data/unspecified/jars/libs/dropbox-android-sdk-1.6.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="986e7a58e925c6f91b88ae8d3224a0550b65acc7">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/dropbox-android-sdk-1.6.3-ec0acff112468b37c83d40bdb8f854f34a32ff59.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/android-sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-c8f05ddcf25157ae32523e7b408983776ef2a76f.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/BqSample/data/unspecified/jars/libs/json_simple-1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/json_simple-1.1-3c3b3dc9f81f6877519f63a87b2c21367fd8225a.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/classes-daa53fe46c5f803bee75cbf638e430a2de6f3b05.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/classes-75caa6c78225a7def707ee07952862605207ba7a.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger/2.0/da7ba0ee1d30edd955da276cdf01d3d7cb24aedc/dagger-2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="da7ba0ee1d30edd955da276cdf01d3d7cb24aedc">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/dagger-2.0-3a5bf28c53e42b3257d3617fda5c1b3fb7fe2a2c.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger-producers/2.0-beta/80276338d1c2542ebebac542b535d1ecd48a3fd7/dagger-producers-2.0-beta.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="80276338d1c2542ebebac542b535d1ecd48a3fd7">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/dagger-producers-2.0-beta-27e22ab49f11929d4d137bec8680979a9adf8568.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.0/a7537446a030da8eb0da4c71424d16c2589f6c4a/glide-3.6.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a7537446a030da8eb0da4c71424d16c2589f6c4a">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/glide-3.6.0-a483c56a244f9d7b0dfac8445c83fa6e92ebaf2b.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger-compiler/2.0/2c5c7cfd604076f09eac6fd0783b3eebbc125732/dagger-compiler-2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2c5c7cfd604076f09eac6fd0783b3eebbc125732">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/dagger-compiler-2.0-6586cde7497b32a614051f0da853ba2caded4c2c.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/classes-48dfe4a8784b92f2d84e0fa7d5abb257715a3525.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-004445ace0a3d9613c7d6fcc1e4ff4dde1a87fc7.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/BqSample/data/unspecified/jars/libs/slf4j-android-1.6.1-RC1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a0b527e8aabcc1f1e97d1674dc3f4f0794ec5df1">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/slf4j-android-1.6.1-RC1-e9aa5b967bc319d711ae130b0016e0514db6a2a5.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/guava-18.0-389bd4c6c5efcc79900bf0efabb48d5e2b82fd8e.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/domain/build/libs/domain.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ee6a09baf585fbefdf369eabe93a1b42ce2dab5c">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/domain-77bd3a8b9124db804042606a00132c08a1244071.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/BqSample/data/unspecified/jars/libs/epublib-core-latest.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ca916295c8af907b0c2d877b5f3a392e5ceb80ea">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/epublib-core-latest-67a50d6206c47206c424bb52d8dd57d11239dbb6.jar" />
+    </item>
+    <item
+        jar="/Users/carlos/Develop/BqSample/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c6d79137693d494dee16372d3921f919eb724ced">
+        <dex dex="/Users/carlos/Develop/BqSample/app/build/intermediates/pre-dexed/debug/classes-babc761144e8c116a25230b3550db48dd1bab23c.jar" />
+    </item>
+
+</items>
