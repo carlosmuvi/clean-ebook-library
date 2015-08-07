@@ -43,10 +43,13 @@ dependencies {
   compile parent.ext.libRecyclerView
   compile parent.ext.libCardView
   compile parent.ext.libButterknife
-  provided parent.ext.libAnnotations
-  provided parent.ext.libDaggerCompiler
   compile parent.ext.libDagger
   compile parent.ext.libAppCompat
   compile parent.ext.libGlide
   compile parent.ext.libDesign
+  compile parent.ext.libRxJava
+  compile parent.ext.libRxAndroid
+
+  provided parent.ext.libAnnotations
+  provided parent.ext.libDaggerCompiler
 }

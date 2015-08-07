@@ -34,7 +34,10 @@ dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
   compile project(':domain')
   compile parent.ext.libAppCompat
+  compile parent.ext.libDagger
+  compile parent.ext.libRxJava
+  compile parent.ext.libRxAndroid
+
   provided parent.ext.libAnnotations
   provided parent.ext.libDaggerCompiler
-  compile parent.ext.libDagger
 }
