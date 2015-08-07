@@ -1,41 +1,48 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
-        classpath 'com.trello:victor:0.1.4'
-
-    }
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:1.2.3'
+    classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+    classpath 'com.trello:victor:0.1.4'
+  }
 }
 
 allprojects {
-    repositories {
-        jcenter()
-    }
+  repositories {
+    jcenter()
+  }
 
-    ext {
-        // Android config
-        androidCompileSdkVersion = 22
-        androidBuildToolsVersion = "22.0.1"
-        androidMinSdkVersion = 15
-        androidTargetSdkVersion = 22
-        androidApplicationId = 'carlosmuvi.bqsample'
-        androidVersionCode = 1
-        androidVersionName = '1.0'
+  ext {
+    // Android config
+    androidCompileSdkVersion = 22
+    androidBuildToolsVersion = "22.0.1"
+    androidMinSdkVersion = 15
+    androidTargetSdkVersion = 22
+    androidApplicationId = 'carlosmuvi.bqsample'
+    androidVersionCode = 1
+    androidVersionName = '1.0'
 
-        // Libraries
-        libButterknife = 'com.jakewharton:butterknife:7.0.1'
-        libDagger = 'com.google.dagger:dagger:2.0'
-        libDaggerCompiler = 'com.google.dagger:dagger-compiler:2.0'
-        libAnnotations = 'org.glassfish:javax.annotation:10.0-b28'
-        libAppCompat = 'com.android.support:appcompat-v7:22.0.+'
-        libRecyclerView = 'com.android.support:recyclerview-v7:22.0.0'
-        libCardView = 'com.android.support:cardview-v7:22.0.0'
-        libGlide = 'com.github.bumptech.glide:glide:3.6.0'
-        libDesign = 'com.android.support:design:22.2.0'
-    }
+    // Libraries
+    libButterknife = 'com.jakewharton:butterknife:7.0.1'
+    libDagger = 'com.google.dagger:dagger:2.0'
+    libDaggerCompiler = 'com.google.dagger:dagger-compiler:2.0'
+    libAnnotations = 'org.glassfish:javax.annotation:10.0-b28'
+    libAppCompat = 'com.android.support:appcompat-v7:22.0.+'
+    libRecyclerView = 'com.android.support:recyclerview-v7:22.0.0'
+    libCardView = 'com.android.support:cardview-v7:22.0.0'
+    libGlide = 'com.github.bumptech.glide:glide:3.6.0'
+    libDesign = 'com.android.support:design:22.2.0'
+
+    // Testing
+    libTestJunit = "junit:junit:4.12"
+    libTestMockito = "org.mockito:mockito-core:1.9.5"
+    libTestAssertj = "org.assertj:assertj-core:1.7.1"
+    libTestRobolectric = "org.robolectric:robolectric:3.0"
+    libTestEspresso = "com.android.support.test.espresso:espresso-core:2.0"
+    libTestingSupportLib = "com.android.support.test:testing-support-lib:0.1"
+  }
 }

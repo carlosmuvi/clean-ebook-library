@@ -7,4 +7,7 @@ targetCompatibility = JavaVersion.VERSION_1_7
 dependencies {
   providedCompile parent.ext.libDaggerCompiler
   compile parent.ext.libDagger
+
+  testCompile parent.ext.libTestJunit
+  testCompile parent.ext.libTestMockito
 }
