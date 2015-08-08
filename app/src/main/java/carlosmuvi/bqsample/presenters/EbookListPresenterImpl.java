@@ -26,6 +26,16 @@ public class EbookListPresenterImpl implements EbookListPresenter {
     this.navigator = navigator;
   }
 
+  /**
+   * *********************
+   * Presenter inherited
+   * *********************
+   */
+
+  @Override public void setView(View view) {
+    this.view = view;
+  }
+
   @Override public void getEbooks() {
     view.showLoading();
     getEbooksUsecase.execute(new EbookListSubscriber());
@@ -36,13 +46,34 @@ public class EbookListPresenterImpl implements EbookListPresenter {
     reorderEbooksUsecase.execute(new EbookReorderSubscriber(), ebooks, orderBy);
   }
 
-  @Override public void setView(View view) {
-    this.view = view;
-  }
-
   @Override public void onEbookClick(Ebook ebook) {
     navigator.navigateToEbookDetails(ebook);
   }
+
+  /**
+   * *********************
+   * Activity lifecycle
+   * *********************
+   */
+
+  @Override public void onResume() {
+
+  }
+
+  @Override public void onPause() {
+
+  }
+
+  @Override public void onDestroy() {
+    getEbooksUsecase.unsubscribe();
+    reorderEbooksUsecase.unsubscribe();
+  }
+
+  /**
+   * *********************
+   * Subscribers
+   * *********************
+   */
 
   private final class EbookListSubscriber extends DefaultSubscriber<Ebook> {
 

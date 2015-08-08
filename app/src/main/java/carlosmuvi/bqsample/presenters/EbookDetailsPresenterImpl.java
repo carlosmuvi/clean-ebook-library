@@ -16,12 +16,30 @@ public class EbookDetailsPresenterImpl implements EbookDetailsPresenter {
     this.navigator = navigator;
   }
 
+  /**
+   * *********************
+   * Presenter inherited
+   * *********************
+   */
+
+  @Override public void setView(View view) {
+    this.view = view;
+  }
+
+  /**
+   * *********************
+   * Activity lifecycle
+   * *********************
+   */
   @Override public void onResume() {
     Ebook ebook = navigator.getEbookExtra();
     view.showBook(ebook);
   }
 
-  @Override public void setView(View view) {
-    this.view = view;
+  @Override public void onPause() {
+
+  }
+  @Override public void onDestroy() {
+
   }
 }

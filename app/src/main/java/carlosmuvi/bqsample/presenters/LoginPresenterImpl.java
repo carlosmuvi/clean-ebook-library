@@ -21,6 +21,12 @@ public class LoginPresenterImpl implements LoginPresenter {
     this.navigator = navigator;
   }
 
+  /**
+   * *********************
+   * Presenter inherited
+   * *********************
+   */
+
   @Override public void setView(View view) {
     this.view = view;
   }
@@ -30,6 +36,11 @@ public class LoginPresenterImpl implements LoginPresenter {
     loginProccessStarted = true;
   }
 
+  /**
+   * *********************
+   * Activity lifecycle
+   * *********************
+   */
   @Override public void onResume() {
     if (loginProccessStarted) {
       loginProccessStarted = false;
@@ -37,6 +48,20 @@ public class LoginPresenterImpl implements LoginPresenter {
       usecase.executeEndLogin(new LoginSubscriber());
     }
   }
+
+  @Override public void onPause() {
+
+  }
+
+  @Override public void onDestroy() {
+    usecase.unsubscribe();
+  }
+
+  /**
+   * *********************
+   * Subscribers
+   * *********************
+   */
 
   private final class LoginSubscriber extends DefaultSubscriber<String> {
 

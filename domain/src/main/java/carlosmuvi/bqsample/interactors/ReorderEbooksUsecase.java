@@ -9,4 +9,7 @@ import java.util.List;
 public interface ReorderEbooksUsecase {
 
   void execute(DefaultSubscriber subscriber, List<Ebook> ebooks, int orderBy);
+
+  void unsubscribe();
+
 }

@@ -6,4 +6,7 @@ package carlosmuvi.bqsample.interactors;
 public interface GetEbooksUsecase {
 
   void execute(DefaultSubscriber defaultSubscriber);
+
+  void unsubscribe();
+
 }

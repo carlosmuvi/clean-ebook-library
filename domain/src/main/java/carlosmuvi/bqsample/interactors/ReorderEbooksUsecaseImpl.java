@@ -55,4 +55,8 @@ public class ReorderEbooksUsecaseImpl extends Interactor implements ReorderEbook
       }
     });
   }
+
+  @Override public void unsubscribe() {
+    super.unsubscribe();
+  }
 }

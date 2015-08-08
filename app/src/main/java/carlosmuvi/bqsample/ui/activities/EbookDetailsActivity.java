@@ -65,6 +65,11 @@ public class EbookDetailsActivity extends BaseActivity implements EbookDetailsPr
     presenter.onResume();
   }
 
+  @Override protected void onDestroy() {
+    super.onDestroy();
+    presenter.onDestroy();
+  }
+
   @Override protected int getLayoutResource() {
     return R.layout.activity_ebook_details;
   }

@@ -28,4 +28,8 @@ public class GetEbooksUsecaseImpl extends Interactor implements GetEbooksUsecase
   @Override protected Observable buildUseCaseObservable() {
     return this.ebookDatasource.listAllEbooks();
   }
+
+  @Override public void unsubscribe() {
+    super.unsubscribe();
+  }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by carlos.
  */
-public interface EbookListPresenter {
+public interface EbookListPresenter extends Presenter{
 
   void getEbooks();
 

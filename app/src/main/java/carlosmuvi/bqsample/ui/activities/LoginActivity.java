@@ -65,6 +65,11 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.View {
     presenter.onResume();
   }
 
+  @Override protected void onDestroy() {
+    super.onDestroy();
+    presenter.onDestroy();
+  }
+
   /**
    * *********************
    * View Inherited

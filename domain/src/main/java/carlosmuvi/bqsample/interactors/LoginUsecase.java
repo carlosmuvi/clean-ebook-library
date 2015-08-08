@@ -8,4 +8,6 @@ public interface LoginUsecase {
   void executeStartLogin();
 
   void executeEndLogin(DefaultSubscriber subscriber);
+
+  void unsubscribe();
 }
