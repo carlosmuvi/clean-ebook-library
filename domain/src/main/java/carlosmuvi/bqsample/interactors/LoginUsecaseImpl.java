@@ -30,8 +30,8 @@ public class LoginUsecaseImpl extends Interactor implements LoginUsecase {
     this.ebookDatasource.startLogin();
   }
 
-  @Override public Observable executeEndLogin() {
-    return buildUseCaseObservable();
+  @Override public void executeEndLogin(DefaultSubscriber subscriber) {
+    this.execute(subscriber);
   }
 
   @Override protected Observable buildUseCaseObservable() {
