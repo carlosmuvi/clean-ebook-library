@@ -22,7 +22,7 @@ public class GetEbooksUsecaseImpl extends Interactor implements GetEbooksUsecase
   }
 
   @Override public void execute(DefaultSubscriber defaultSubscriber) {
-    this.execute(defaultSubscriber);
+    super.execute(defaultSubscriber);
   }
 
   @Override protected Observable buildUseCaseObservable() {

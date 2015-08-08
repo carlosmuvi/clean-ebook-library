@@ -130,6 +130,7 @@ public class DropboxDatasource implements EbookDatasource {
               }
             }
           }
+          subscriber.onCompleted();
 
         } catch (DropboxException e) {
           Log.e("ERROR", "error getting ebook list");
