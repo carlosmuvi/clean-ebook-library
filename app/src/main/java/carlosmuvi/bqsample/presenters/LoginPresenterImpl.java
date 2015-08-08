@@ -1,6 +1,6 @@
 package carlosmuvi.bqsample.presenters;
 
-import android.util.Log;
+import carlosmuvi.bqsample.interactors.DefaultSubscriber;
 import carlosmuvi.bqsample.interactors.LoginUsecase;
 import carlosmuvi.bqsample.navigation.Navigator;
 import javax.inject.Inject;
@@ -34,17 +34,23 @@ public class LoginPresenterImpl implements LoginPresenter {
     if (loginProccessStarted) {
       loginProccessStarted = false;
       view.showLoading();
-      usecase.executeEndLogin(new LoginUsecase.Callback() {
-        @Override public void onLoginSuccess() {
-          view.hideLoading();
-          navigator.navigateToEbookList();
-        }
+      usecase.executeEndLogin(new LoginSubscriber());
+    }
+  }
 
-        @Override public void onError() {
-          view.hideLoading();
-          view.showMessage("Error authenticating with Dropbox");
-        }
-      });
+  private final class LoginSubscriber extends DefaultSubscriber<String> {
+
+    @Override public void onCompleted() {
+      view.hideLoading();
+      navigator.navigateToEbookList();
+    }
+
+    @Override public void onError(Throwable e) {
+      view.hideLoading();
+      view.showMessage("Error authenticating with Dropbox");
+    }
+
+    @Override public void onNext(String s) {
     }
   }
 }

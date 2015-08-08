@@ -1,9 +1,11 @@
 package carlosmuvi.bqsample.presenters;
 
+import carlosmuvi.bqsample.interactors.DefaultSubscriber;
 import carlosmuvi.bqsample.interactors.GetEbooksUsecase;
 import carlosmuvi.bqsample.interactors.ReorderEbooksUsecase;
 import carlosmuvi.bqsample.model.Ebook;
 import carlosmuvi.bqsample.navigation.Navigator;
+import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
 
@@ -25,41 +27,13 @@ public class EbookListPresenterImpl implements EbookListPresenter {
   }
 
   @Override public void getEbooks() {
-
-    final int[] proccessedEbooks = { 0 };
-
     view.showLoading();
-    getEbooksUsecase.execute(new GetEbooksUsecase.Callback() {
-      @Override public void onSuccess(List<Ebook> ebooks) {
-        view.showEbooks(ebooks);
-        view.hideLoading();
-      }
-
-      @Override public void onError() {
-        view.hideLoading();
-        view.showMessage("error getting books!");
-      }
-
-      @Override public void onEbookProcessed() {
-        proccessedEbooks[0]++;
-        view.updateLoading(proccessedEbooks[0] + " ebooks found...");
-      }
-    });
+    getEbooksUsecase.execute(new EbookListSubscriber());
   }
 
   @Override public void reorderEbooks(List<Ebook> ebooks, int orderBy) {
     view.showLoading();
-    reorderEbooksUsecase.execute(new ReorderEbooksUsecase.Callback() {
-      @Override public void onSuccess(List<Ebook> ebooks) {
-        view.reloadEbooks(ebooks);
-        view.hideLoading();
-      }
-
-      @Override public void onError() {
-        view.hideLoading();
-        view.showMessage("error sorting books!");
-      }
-    }, ebooks, orderBy);
+    reorderEbooksUsecase.execute(new EbookReorderSubscriber(), ebooks, orderBy);
   }
 
   @Override public void setView(View view) {
@@ -68,5 +42,41 @@ public class EbookListPresenterImpl implements EbookListPresenter {
 
   @Override public void onEbookClick(Ebook ebook) {
     navigator.navigateToEbookDetails(ebook);
+  }
+
+  private final class EbookListSubscriber extends DefaultSubscriber<Ebook> {
+
+    List<Ebook> ebooks = new ArrayList<>();
+
+    @Override public void onCompleted() {
+      view.showEbooks(ebooks);
+      view.hideLoading();
+    }
+
+    @Override public void onError(Throwable e) {
+      view.hideLoading();
+      view.showMessage("error loading books!");
+    }
+
+    @Override public void onNext(Ebook ebook) {
+      ebooks.add(ebook);
+      view.updateLoading(ebooks.size() + " ebooks found...");
+    }
+  }
+
+  private final class EbookReorderSubscriber extends DefaultSubscriber<List<Ebook>> {
+
+    @Override public void onCompleted() {
+    }
+
+    @Override public void onError(Throwable e) {
+      view.hideLoading();
+      view.showMessage("error sorting books!");
+    }
+
+    @Override public void onNext(List<Ebook> ebooks) {
+      view.reloadEbooks(ebooks);
+      view.hideLoading();
+    }
   }
 }
