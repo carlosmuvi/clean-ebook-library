@@ -1,19 +1,13 @@
 package carlosmuvi.bqsample.interactors;
 
-import carlosmuvi.bqsample.executor.Interactor;
+import rx.Observable;
 
 /**
  * Created by carlos.
  */
-public interface LoginUsecase extends Interactor {
-
-  interface Callback {
-    void onLoginSuccess();
-
-    void onError();
-  }
+public interface LoginUsecase {
 
   void executeStartLogin();
 
-  void executeEndLogin(Callback callback);
+  Observable executeEndLogin();
 }

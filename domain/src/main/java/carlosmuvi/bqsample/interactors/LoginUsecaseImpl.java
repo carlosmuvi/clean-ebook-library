@@ -5,55 +5,36 @@ package carlosmuvi.bqsample.interactors;
  */
 
 import carlosmuvi.bqsample.datasource.EbookDatasource;
+import carlosmuvi.bqsample.executor.Interactor;
 import carlosmuvi.bqsample.executor.MainThread;
 import carlosmuvi.bqsample.executor.ThreadExecutor;
 import javax.inject.Inject;
+import rx.Observable;
 
 /**
  * Created by carlos.
  */
-public class LoginUsecaseImpl implements LoginUsecase {
+public class LoginUsecaseImpl extends Interactor implements LoginUsecase {
 
   EbookDatasource ebookDatasource;
-  MainThread mainThread;
-  ThreadExecutor threadExecutor;
-
-  Callback callback;
 
   @Inject public LoginUsecaseImpl(EbookDatasource ebookDatasource, MainThread mainThread,
       ThreadExecutor threadExecutor) {
 
+    super(threadExecutor, mainThread);
     this.ebookDatasource = ebookDatasource;
-    this.mainThread = mainThread;
-    this.threadExecutor = threadExecutor;
-  }
 
-  @Override public void run() {
-    this.ebookDatasource.completeLogin(new EbookDatasource.Callback() {
-      @Override public void onSuccess() {
-        mainThread.post(new Runnable() {
-          @Override public void run() {
-            callback.onLoginSuccess();
-          }
-        });
-      }
-
-      @Override public void onError() {
-        mainThread.post(new Runnable() {
-          @Override public void run() {
-            callback.onError();
-          }
-        });
-      }
-    });
   }
 
   @Override public void executeStartLogin() {
     this.ebookDatasource.startLogin();
   }
 
-  @Override public void executeEndLogin(final Callback callback) {
-    this.callback = callback;
-    this.threadExecutor.run(this);
+  @Override public Observable executeEndLogin() {
+    return buildUseCaseObservable();
+  }
+
+  @Override protected Observable buildUseCaseObservable() {
+    return this.ebookDatasource.completeLogin();
   }
 }

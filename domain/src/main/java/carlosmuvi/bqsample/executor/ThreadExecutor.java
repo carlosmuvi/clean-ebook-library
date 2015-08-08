@@ -35,7 +35,7 @@ public class ThreadExecutor implements InteractorExecutor {
             KEEP_ALIVE_TIME_UNIT, this.workQueue, this.threadFactory);
   }
 
-  @Override public void run(Runnable runnable) {
+  @Override public void execute(Runnable runnable) {
     if (runnable == null) {
       throw new IllegalArgumentException("Runnable to execute cannot be null");
     }
