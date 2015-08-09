@@ -8,20 +8,18 @@ import carlosmuvi.bqsample.model.Ebook;
 import carlosmuvi.data.R;
 import carlosmuvi.data.dropbox.exception.DropboxBookException;
 import carlosmuvi.data.dropbox.exception.DropboxLoginException;
-import carlosmuvi.data.dropbox.mapper.DropboxBookMapper;
-import carlosmuvi.data.dropbox.model.DropboxBook;
+import carlosmuvi.data.dropbox.filter.IsEpubFilter;
+import carlosmuvi.data.dropbox.filter.NotNullFilter;
+import carlosmuvi.data.dropbox.mapper.EbookDataMapper;
 import com.dropbox.client2.DropboxAPI;
+import com.dropbox.client2.DropboxAPI.DeltaEntry;
+import com.dropbox.client2.DropboxAPI.DeltaPage;
+import com.dropbox.client2.DropboxAPI.Entry;
 import com.dropbox.client2.android.AndroidAuthSession;
 import com.dropbox.client2.exception.DropboxException;
 import com.dropbox.client2.session.AccessTokenPair;
 import com.dropbox.client2.session.AppKeyPair;
-import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Locale;
 import javax.inject.Inject;
-import nl.siegmann.epublib.domain.Book;
-import nl.siegmann.epublib.epub.EpubReader;
 import rx.Observable;
 import rx.Subscriber;
 
@@ -30,19 +28,15 @@ import rx.Subscriber;
  */
 public class DropboxDatasource implements EbookDatasource {
 
-  public static final String DROPBOX_DATEFORMAT = "EEE, d MMM yyyy HH:mm:ss Z";
   public static final String DROPBOX_PREFKEY_NAME = "ACCESS_KEY_NAME";
   public static final String DROPBOX_PREFKEY_SECRET = "ACCESS_SECRET_NAME";
-  public static final String EXT_EPUB = ".epub";
 
   private Activity activity;
-  private DropboxBookMapper mapper;
   private DropboxAPI<AndroidAuthSession> dropboxAPI;
 
-  @Inject public DropboxDatasource(Activity activity, DropboxBookMapper mapper) {
+  @Inject public DropboxDatasource(Activity activity) {
 
     this.activity = activity;
-    this.mapper = mapper;
 
     AndroidAuthSession session = buildSession();
     dropboxAPI = new DropboxAPI<>(session);
@@ -78,8 +72,8 @@ public class DropboxDatasource implements EbookDatasource {
    */
   @Override public Observable<Ebook> listAllEbooks() {
 
-    return Observable.create(new Observable.OnSubscribe<DropboxBook>() {
-      @Override public void call(Subscriber<? super DropboxBook> subscriber) {
+    return Observable.create(new Observable.OnSubscribe<DeltaEntry<Entry>>() {
+      @Override public void call(Subscriber<? super DeltaEntry<Entry>> subscriber) {
 
         // restore Dropbox authentication info
         if (dropboxAPI == null) {
@@ -92,63 +86,27 @@ public class DropboxDatasource implements EbookDatasource {
           String cursor = null;
 
           while (hasMore) {
-            DropboxAPI.DeltaPage<DropboxAPI.Entry> result = dropboxAPI.delta(cursor);
+            DeltaPage<Entry> result = dropboxAPI.delta(cursor);
             cursor = result.cursor;
             hasMore = result.hasMore;
 
-            //get all .epub files metadata from dropbox
-            for (DropboxAPI.DeltaEntry<DropboxAPI.Entry> entry : result.entries) {
-
-              if (isEpubFile(entry)) {
-
-                //get book file stream from metadata
-                DropboxAPI.DropboxInputStream file =
-                    dropboxAPI.getFileStream(entry.metadata.path, null);
-
-                //build DrobpoxBook object (book + file metadata)
-                try {
-                  DropboxBook dropboxBook = new DropboxBook();
-
-                  //remove unnecessary content and set book
-                  Book book = new EpubReader().readEpub(file);
-                  book.setTableOfContents(null);
-                  dropboxBook.setBook(book);
-
-                  //set file metadata
-                  SimpleDateFormat df = new SimpleDateFormat(DROPBOX_DATEFORMAT, Locale.US);
-                  dropboxBook.setCreated(df.parse(entry.metadata.clientMtime));
-                  dropboxBook.setPath(entry.metadata.path);
-
-                  //notify added book
-                  subscriber.onNext(dropboxBook);
-                } catch (IOException e) {
-                  Log.d("DEBUG", entry.metadata.fileName() + ": corrupted or non real epub file");
-                } catch (ParseException e) {
-                  Log.d("DEBUG",
-                      entry.metadata.fileName() + ": error mapping creation date, skipping this ebbok");
-                }
-              }
+            for (DeltaEntry<Entry> entry : result.entries) {
+              subscriber.onNext(entry);
             }
           }
           subscriber.onCompleted();
-
         } catch (DropboxException e) {
-          Log.e("ERROR", "error getting ebook list");
+          Log.e("DEBUG", "error getting delta from dropbox");
           subscriber.onError(new DropboxBookException());
         }
       }
-    }).map(new DropboxBookMapper());
-
-  }
-
-  /**
-   * @param entry: file to check if is epub
-   * @return true if entry is epub file.
-   */
-  private boolean isEpubFile(DropboxAPI.DeltaEntry<DropboxAPI.Entry> entry) {
-    return entry.metadata != null && !entry.metadata.isDir && entry.metadata.fileName()
-        .substring(entry.metadata.fileName().length() - 5)
-        .equalsIgnoreCase(EXT_EPUB);
+    })
+        //remove not .epub files
+        .filter(new IsEpubFilter())
+        //transform dropbox files to ebook files
+        .map(new EbookDataMapper(dropboxAPI))
+        //remove null ebooks
+        .filter(new NotNullFilter<Ebook>());
   }
 
   /**
