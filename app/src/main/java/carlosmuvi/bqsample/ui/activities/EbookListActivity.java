@@ -73,6 +73,11 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
     presenter.getEbooks();
   }
 
+  @Override protected void onDestroy() {
+    super.onDestroy();
+    presenter.onDestroy();
+  }
+
   @Override public boolean onCreateOptionsMenu(Menu menu) {
     MenuInflater inflater = getMenuInflater();
     inflater.inflate(R.menu.menu_ebook_list, menu);

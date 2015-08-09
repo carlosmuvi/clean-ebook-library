@@ -3,13 +3,11 @@ package carlosmuvi.bqsample.presenters;
 /**
  * Created by carlos.
  */
-public interface LoginPresenter {
+public interface LoginPresenter extends Presenter {
 
   void setView(View view);
 
   void login();
-
-  void onResume();
 
   interface View {
 

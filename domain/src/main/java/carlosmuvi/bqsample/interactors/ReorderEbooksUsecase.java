@@ -1,19 +1,15 @@
 package carlosmuvi.bqsample.interactors;
 
-import carlosmuvi.bqsample.executor.Interactor;
 import carlosmuvi.bqsample.model.Ebook;
 import java.util.List;
 
 /**
  * Created by carlos.
  */
-public interface ReorderEbooksUsecase extends Interactor {
+public interface ReorderEbooksUsecase {
 
-  interface Callback {
-    void onSuccess(List<Ebook> ebooks);
+  void execute(DefaultSubscriber subscriber, List<Ebook> ebooks, int orderBy);
 
-    void onError();
-  }
+  void unsubscribe();
 
-  void execute(Callback callback, List<Ebook> ebooks, int orderBy);
 }

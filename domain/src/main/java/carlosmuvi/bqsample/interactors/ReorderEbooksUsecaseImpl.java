@@ -1,6 +1,7 @@
 package carlosmuvi.bqsample.interactors;
 
 import carlosmuvi.bqsample.datasource.EbookDatasource;
+import carlosmuvi.bqsample.executor.Interactor;
 import carlosmuvi.bqsample.executor.MainThread;
 import carlosmuvi.bqsample.executor.ThreadExecutor;
 import carlosmuvi.bqsample.model.Ebook;
@@ -8,17 +9,15 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import javax.inject.Inject;
+import rx.Observable;
+import rx.Subscriber;
 
 /**
  * Created by carlos.
  */
-public class ReorderEbooksUsecaseImpl implements ReorderEbooksUsecase {
+public class ReorderEbooksUsecaseImpl extends Interactor implements ReorderEbooksUsecase {
 
   EbookDatasource ebookDatasource;
-  MainThread mainThread;
-  ThreadExecutor threadExecutor;
-
-  Callback callback;
 
   List<Ebook> ebooks;
   int orderBy;
@@ -28,38 +27,36 @@ public class ReorderEbooksUsecaseImpl implements ReorderEbooksUsecase {
 
   @Inject public ReorderEbooksUsecaseImpl(EbookDatasource ebookDatasource, MainThread mainThread,
       ThreadExecutor threadExecutor) {
-
+    super(threadExecutor, mainThread);
     this.ebookDatasource = ebookDatasource;
-    this.mainThread = mainThread;
-    this.threadExecutor = threadExecutor;
   }
 
-  @Override public void run() {
-    Collections.sort(ebooks, new Comparator<Ebook>() {
-      @Override public int compare(Ebook ebook, Ebook t1) {
-        if (orderBy == ORDERBY_TITLE) {
-          return ebook.getTitle().compareToIgnoreCase(t1.getTitle());
-        } else {
-          return ebook.getCreated().compareTo(t1.getCreated());
-        }
-      }
-    });
-    notifyPresenter();
-  }
-
-  private void notifyPresenter() {
-    mainThread.post(new Runnable() {
-      @Override public void run() {
-        callback.onSuccess(ebooks);
-      }
-    });
-  }
-
-  @Override public void execute(Callback callback, List<Ebook> ebooks, int orderBy) {
-    this.callback = callback;
+  @Override public void execute(DefaultSubscriber subscriber, List<Ebook> ebooks, int orderBy) {
     this.ebooks = ebooks;
     this.orderBy = orderBy;
 
-    threadExecutor.run(this);
+    this.execute(subscriber);
+  }
+
+  @Override protected Observable buildUseCaseObservable() {
+    return Observable.create(new Observable.OnSubscribe<List<Ebook>>() {
+      @Override public void call(Subscriber<? super List<Ebook>> subscriber) {
+        Collections.sort(ebooks, new Comparator<Ebook>() {
+          @Override public int compare(Ebook ebook, Ebook t1) {
+            if (orderBy == ORDERBY_TITLE) {
+              return ebook.getTitle().compareToIgnoreCase(t1.getTitle());
+            } else {
+              return ebook.getCreated().compareTo(t1.getCreated());
+            }
+          }
+        });
+        subscriber.onNext(ebooks);
+        subscriber.onCompleted();
+      }
+    });
+  }
+
+  @Override public void unsubscribe() {
+    super.unsubscribe();
   }
 }

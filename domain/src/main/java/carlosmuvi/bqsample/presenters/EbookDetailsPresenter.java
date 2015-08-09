@@ -5,7 +5,7 @@ import carlosmuvi.bqsample.model.Ebook;
 /**
  * Created by carlos.
  */
-public interface EbookDetailsPresenter {
+public interface EbookDetailsPresenter extends Presenter{
 
   void onResume();
 

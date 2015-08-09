@@ -1,6 +1,6 @@
 package carlosmuvi.bqsample.presenters;
 
-import android.util.Log;
+import carlosmuvi.bqsample.interactors.DefaultSubscriber;
 import carlosmuvi.bqsample.interactors.LoginUsecase;
 import carlosmuvi.bqsample.navigation.Navigator;
 import javax.inject.Inject;
@@ -21,6 +21,12 @@ public class LoginPresenterImpl implements LoginPresenter {
     this.navigator = navigator;
   }
 
+  /**
+   * *********************
+   * Presenter inherited
+   * *********************
+   */
+
   @Override public void setView(View view) {
     this.view = view;
   }
@@ -30,21 +36,46 @@ public class LoginPresenterImpl implements LoginPresenter {
     loginProccessStarted = true;
   }
 
+  /**
+   * *********************
+   * Activity lifecycle
+   * *********************
+   */
   @Override public void onResume() {
     if (loginProccessStarted) {
       loginProccessStarted = false;
       view.showLoading();
-      usecase.executeEndLogin(new LoginUsecase.Callback() {
-        @Override public void onLoginSuccess() {
-          view.hideLoading();
-          navigator.navigateToEbookList();
-        }
+      usecase.executeEndLogin(new LoginSubscriber());
+    }
+  }
 
-        @Override public void onError() {
-          view.hideLoading();
-          view.showMessage("Error authenticating with Dropbox");
-        }
-      });
+  @Override public void onPause() {
+
+  }
+
+  @Override public void onDestroy() {
+    usecase.unsubscribe();
+  }
+
+  /**
+   * *********************
+   * Subscribers
+   * *********************
+   */
+
+  private final class LoginSubscriber extends DefaultSubscriber<String> {
+
+    @Override public void onCompleted() {
+      view.hideLoading();
+      navigator.navigateToEbookList();
+    }
+
+    @Override public void onError(Throwable e) {
+      view.hideLoading();
+      view.showMessage("Error authenticating with Dropbox");
+    }
+
+    @Override public void onNext(String s) {
     }
   }
 }

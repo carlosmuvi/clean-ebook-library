@@ -1,8 +1,10 @@
 package carlosmuvi.bqsample.executor;
 
+import rx.Scheduler;
+
 /**
  * Created by carlos.
  */
 public interface MainThread {
-  void post(final Runnable runnable);
+  Scheduler getScheduler();
 }

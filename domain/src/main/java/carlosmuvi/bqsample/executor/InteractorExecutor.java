@@ -1,9 +1,10 @@
 package carlosmuvi.bqsample.executor;
 
+import java.util.concurrent.Executor;
+
 /**
  * Created by carlos.
  */
-public interface InteractorExecutor {
+public interface InteractorExecutor extends Executor {
 
-  void run(Runnable runnable);
 }

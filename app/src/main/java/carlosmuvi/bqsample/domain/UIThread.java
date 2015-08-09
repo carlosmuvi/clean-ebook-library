@@ -1,22 +1,19 @@
 package carlosmuvi.bqsample.domain;
 
-import android.os.Handler;
-import android.os.Looper;
 import carlosmuvi.bqsample.executor.MainThread;
 import javax.inject.Inject;
+import rx.Scheduler;
+import rx.android.schedulers.AndroidSchedulers;
 
 /**
  * Created by carlos.
  */
 public class UIThread implements MainThread {
 
-  private Handler handler;
-
   @Inject UIThread() {
-    this.handler = new Handler(Looper.getMainLooper());
   }
 
-  @Override public void post(Runnable runnable) {
-    handler.post(runnable);
+  @Override public Scheduler getScheduler() {
+    return AndroidSchedulers.mainThread();
   }
 }

@@ -1,22 +1,12 @@
 package carlosmuvi.bqsample.interactors;
 
-import carlosmuvi.bqsample.executor.Interactor;
-import carlosmuvi.bqsample.model.Ebook;
-import java.util.List;
-
 /**
  * Created by carlos.
  */
-public interface GetEbooksUsecase extends Interactor {
+public interface GetEbooksUsecase {
 
-  interface Callback {
+  void execute(DefaultSubscriber defaultSubscriber);
 
-    void onSuccess(List<Ebook> ebooks);
+  void unsubscribe();
 
-    void onError();
-
-    void onEbookProcessed();
-  }
-
-  void execute(Callback callback);
 }
