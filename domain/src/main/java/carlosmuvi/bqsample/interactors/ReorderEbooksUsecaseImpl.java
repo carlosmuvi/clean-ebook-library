@@ -31,7 +31,7 @@ public class ReorderEbooksUsecaseImpl extends Interactor implements ReorderEbook
     this.ebookDatasource = ebookDatasource;
   }
 
-  @Override public void execute(DefaultSubscriber subscriber, List<Ebook> ebooks, int orderBy) {
+  @Override public void execute(Subscriber subscriber, List<Ebook> ebooks, int orderBy) {
     this.ebooks = ebooks;
     this.orderBy = orderBy;
 

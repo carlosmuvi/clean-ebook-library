@@ -10,6 +10,7 @@ import carlosmuvi.bqsample.executor.MainThread;
 import carlosmuvi.bqsample.executor.ThreadExecutor;
 import javax.inject.Inject;
 import rx.Observable;
+import rx.Subscriber;
 
 /**
  * Created by carlos.
@@ -30,7 +31,7 @@ public class LoginUsecaseImpl extends Interactor implements LoginUsecase {
     this.ebookDatasource.startLogin();
   }
 
-  @Override public void executeEndLogin(DefaultSubscriber subscriber) {
+  @Override public void executeEndLogin(Subscriber subscriber) {
     this.execute(subscriber);
   }
 

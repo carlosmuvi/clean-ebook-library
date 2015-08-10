@@ -6,6 +6,7 @@ import carlosmuvi.bqsample.executor.MainThread;
 import carlosmuvi.bqsample.executor.ThreadExecutor;
 import javax.inject.Inject;
 import rx.Observable;
+import rx.Subscriber;
 
 /**
  * Created by carlos.
@@ -21,8 +22,8 @@ public class GetEbooksUsecaseImpl extends Interactor implements GetEbooksUsecase
     this.ebookDatasource = ebookDatasource;
   }
 
-  @Override public void execute(DefaultSubscriber defaultSubscriber) {
-    super.execute(defaultSubscriber);
+  @Override public void execute(Subscriber subscriber) {
+    super.execute(subscriber);
   }
 
   @Override protected Observable buildUseCaseObservable() {

@@ -25,11 +25,11 @@ public abstract class Interactor {
   protected abstract Observable buildUseCaseObservable();
 
   @SuppressWarnings("unchecked")
-  public void execute(Subscriber UseCaseSubscriber) {
+  public void execute(Subscriber subscriber) {
     this.subscription = this.buildUseCaseObservable()
         .subscribeOn(Schedulers.from(threadExecutor))
         .observeOn(postExecutionThread.getScheduler())
-        .subscribe(UseCaseSubscriber);
+        .subscribe(subscriber);
   }
 
   /**
