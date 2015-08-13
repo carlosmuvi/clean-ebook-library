@@ -19,8 +19,8 @@ public class MockDbDatasource implements EbookDatasource {
 
   }
 
-  @Override public void startLogin() {
-
+  @Override public boolean startLogin() {
+    return false;
   }
 
   @Override public Observable<String> completeLogin() {

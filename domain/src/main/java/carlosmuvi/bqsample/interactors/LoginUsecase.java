@@ -7,7 +7,7 @@ import rx.Subscriber;
  */
 public interface LoginUsecase {
 
-  void executeStartLogin();
+  boolean executeStartLogin();
 
   void executeEndLogin(Subscriber subscriber);
 

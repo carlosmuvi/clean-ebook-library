@@ -45,8 +45,9 @@ public class DropboxDatasource implements EbookDatasource {
   /**
    * Start Dropbox login
    */
-  @Override public void startLogin() {
+  @Override public boolean startLogin() {
     dropboxAPI.getSession().startOAuth2Authentication(activity);
+    return true;
   }
 
   @Override public Observable<String> completeLogin() {

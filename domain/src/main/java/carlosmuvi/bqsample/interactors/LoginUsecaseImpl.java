@@ -27,8 +27,8 @@ public class LoginUsecaseImpl extends Interactor implements LoginUsecase {
 
   }
 
-  @Override public void executeStartLogin() {
-    this.ebookDatasource.startLogin();
+  @Override public boolean executeStartLogin() {
+    return this.ebookDatasource.startLogin();
   }
 
   @Override public void executeEndLogin(Subscriber subscriber) {

@@ -8,7 +8,7 @@ import rx.Observable;
  */
 public interface EbookDatasource {
 
-  void startLogin();
+  boolean startLogin();
 
   Observable<String> completeLogin();
 

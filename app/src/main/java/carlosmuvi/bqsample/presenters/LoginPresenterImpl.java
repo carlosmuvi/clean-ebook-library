@@ -32,8 +32,10 @@ public class LoginPresenterImpl implements LoginPresenter {
   }
 
   @Override public void login() {
-    usecase.executeStartLogin();
     loginProccessStarted = true;
+    if (!usecase.executeStartLogin()) {
+      completeLogin();
+    }
   }
 
   /**
@@ -42,6 +44,10 @@ public class LoginPresenterImpl implements LoginPresenter {
    * *********************
    */
   @Override public void onResume() {
+    completeLogin();
+  }
+
+  private void completeLogin() {
     if (loginProccessStarted) {
       loginProccessStarted = false;
       view.showLoading();
