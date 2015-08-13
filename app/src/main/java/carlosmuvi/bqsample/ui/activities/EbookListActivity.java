@@ -55,8 +55,9 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
    * *********************
    */
 
-  private static final int VIEWTYPE_LIST = 10;
-  private static final int VIEWTYPE_GRID = 11;
+  private static final byte VIEWTYPE_LIST = 10;
+  private static final byte VIEWTYPE_GRID = 11;
+  private int currentViewType = VIEWTYPE_LIST;
 
   @Bind(R.id.ebook_list_rv) public EbookRecyclerView recyclerView;
   @Bind(R.id.empty_list_tv) public TextView emptyListTv;
@@ -148,24 +149,29 @@ public class EbookListActivity extends BaseActivity implements EbookListPresente
   }
 
   @Override public void switchView(int viewType) {
-    List<Ebook> ebooks = ((EbookAdapter) recyclerView.getAdapter()).getItems();
-    final EbookAdapter adapter;
 
-    if (viewType == VIEWTYPE_GRID) {
-      recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
-      recyclerView.setAdapter(adapter = new EbookAdapter(ebooks, R.layout.view_ebook_grid));
-    } else if (viewType == VIEWTYPE_LIST) {
-      recyclerView.setLayoutManager(new LinearLayoutManager(this));
-      recyclerView.setAdapter(adapter = new EbookAdapter(ebooks, R.layout.view_ebook_list));
-    } else {
-      return;
-    }
+    if(viewType != currentViewType){
+      List<Ebook> ebooks = ((EbookAdapter) recyclerView.getAdapter()).getItems();
+      EbookAdapter adapter = null;
+      currentViewType = viewType;
 
-    adapter.setOnItemClickListener(new OnRecyclerViewItemClickListener<Ebook>() {
-      @Override public void onItemClick(View view, Ebook ebook) {
-        presenter.onEbookClick(ebook);
+      switch (viewType) {
+        case VIEWTYPE_GRID:
+          recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
+          recyclerView.setAdapter(adapter = new EbookAdapter(ebooks, R.layout.view_ebook_grid));
+          break;
+        case VIEWTYPE_LIST:
+          recyclerView.setLayoutManager(new LinearLayoutManager(this));
+          recyclerView.setAdapter(adapter = new EbookAdapter(ebooks, R.layout.view_ebook_list));
+          break;
       }
-    });
+
+      adapter.setOnItemClickListener(new OnRecyclerViewItemClickListener<Ebook>() {
+        @Override public void onItemClick(View view, Ebook ebook) {
+          presenter.onEbookClick(ebook);
+        }
+      });
+    }
   }
 
   @Override public void showMessage(String message) {
