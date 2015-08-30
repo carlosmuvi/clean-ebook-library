@@ -18,10 +18,10 @@ public class TestUtils {
     for (int i = size; i > 0; i--) {
 
       Ebook ebook = new Ebook();
-      ebook.setTitle("Don Quijote de la Mancha, Parte " + i);
+      ebook.setTitle("" + (int)(Math.random() * 1000000));
       ebook.setAuthor("Miguel de Cervantes Saavedra ");
       ebook.setPath("/very/very/long/path/in/dropbox ");
-      ebook.setCreated(new Date(100000 * i));
+      ebook.setCreated(new Date((long) (Math.random() * 100000000)));
       ebooks.add(ebook);
     }
 

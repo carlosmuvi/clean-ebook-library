@@ -9,6 +9,7 @@ dependencies {
 
   compile parent.ext.libDagger
   compile parent.ext.libRxJava
+  compile parent.ext.libGuava
 
   testCompile parent.ext.libTestJunit
   testCompile parent.ext.libTestMockito
