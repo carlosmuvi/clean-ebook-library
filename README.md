@@ -1,5 +1,8 @@
 # BQ Ebook Library Sample
 
+Sample repository coded for selection proccess at BQ.
+It reads all .epub files from your Dropbox account and shows them in different ways.
+
 ## Screenshots
 <img src="https://raw.githubusercontent.com/carlospiles/bqsample/master/art/screenshot_ebook_list.png" width="400">
 <img src="https://raw.githubusercontent.com/carlospiles/bqsample/master/art/screenshot_ebook_details.png" width="400">
