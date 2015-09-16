@@ -1,4 +1,4 @@
-# BQ Ebook Library Sample
+# Clean Ebook Library
 
 Sample repository coded for selection proccess at BQ.
 It reads all .epub files from your Dropbox account and shows them in different ways.
